@@ -12,12 +12,13 @@ import os
 import shutil
 import subprocess
 # import sys
+import _thread
 	
 
 finalCatalog 	= ''
 inputExtension 	= '.pdf'
 availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
-exceptExtension = ['.cfl', '.dat']
+except_extension = ['.cfl', '.dat']
 listMD5 		= []
 dMode			= True
 
@@ -55,7 +56,7 @@ class AppLayout:
 		frame_settings    = Frame(l_frame_settings, bd=5, bg='blue')
 		# self.ent_cdir = Entry(frame_settings, bg='green', width=100)
 		
-		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.epf', '.erf')	
+		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.epf', '.erf', 'ALL FILE EXTENSIONS')	
 		self.combo_extension = ttk.Combobox(frame_settings, width=11, values=self.combo_extension_val, state=NORMAL)
 		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
 		self.combo_extension.current(0)
@@ -142,10 +143,39 @@ class AppLayout:
 		
 		
 		# side: выравнивает виджет по одной из сторон контейнера RIGHT (выравнивание по правой стороне), W: положение в левой части контейнера по центру
+		self.getIgnorExtensions()
+	
+	def openThread(self, settings):
+		_thread.start_new_thread(self.setFields, (settings,))
+	
+	
+	def setFields(self, settings):
+		print(settings, type(settings))
+		# self.txt.delete(1.0, END)	
+		# for i in range(len(listMD5)):
+		self.txt.insert(END, settings + '\n')
+		# self.txt.insert(END, '\n')
+					
+		# self.sale_name.delete(0, END)
+		# self.sale_name.insert(0, settings['name'])
+		# self.sale_address.delete(0, END)
+		# self.sale_address.insert(0, settings['address'])
+		# self.cash_model.current(settings['model'])
+	
 		
+	def getIgnorExtensions(self):
+		filename = os.path.join(self.choose_directory, 'ignore extensions from list.txt') 
+		with open(filename, 'r', encoding='UTF-8') as f_hd:
+			# list_of_string = f_hd.read()	# <class 'str'>
+			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'>
+		# print(list_of_val_with_line_breaks, type(list_of_val_with_line_breaks))
+		list_of_values = [value.rstrip('\n') for value in list_of_val_with_line_breaks]
+	
+		# print(list_of_values, type(list_of_values))
 		
+		except_extension.extend(list_of_values)
 		
-		
+		# print(except_extension, type(except_extension))
 	
 	
 	def selectDebug(self):
@@ -213,10 +243,10 @@ class AppLayout:
 				else:
 					showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
 					
-				self.txt.delete(1.0, END)	
-				for i in range(len(listMD5)):
-					self.txt.insert(END, listMD5[i])
-					self.txt.insert(END, '\n')
+				# self.txt.delete(1.0, END)	
+				# for i in range(len(listMD5)):
+					# self.txt.insert(END, listMD5[i])
+					# self.txt.insert(END, '\n')
 				
 			except FileNotFoundError as e:
 				logs.logWrite(f"FileNotFoundError {e}")
@@ -237,19 +267,20 @@ class AppLayout:
 				if os.path.isfile(path):
 					# print(f"path: {path}")
 					# txtQuit('q')
-
-					file_size = os.path.getsize(path)
-					
-					if not file_size > 0:
-						print(f"Размер файла {path}: {file_size} байт", type(file_size))
-						continue
 					
 
 					basename, extension = os.path.splitext(path)
 					# print(f"extension: {extension}")
 					# txtQuit('q')
 					
-					if extension in exceptExtension:
+					if extension in except_extension:
+						print(f"Расширение {extension} в списке игнорируемых.") 
+						continue
+						
+					file_size = os.path.getsize(path)
+					
+					if not file_size > 0:
+						print(f"Размер файла {path}: {file_size} байт", type(file_size))
 						continue
 
 					# if len(inputExtension) > 0:
@@ -257,10 +288,11 @@ class AppLayout:
 							# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
 							# continue
 					inputExtension = self.selectedExtension(self)
-					# print(inputExtension)
-					if inputExtension.upper() != extension.upper():
-						print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
-						continue
+					
+					if inputExtension != 'ALL FILE EXTENSIONS':
+						if inputExtension.upper() != extension.upper():
+							print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+							continue
 					
 					try:
 						
@@ -297,6 +329,7 @@ class AppLayout:
 								# self.txt.insert(END, [result.stdout.splitlines()[1], path])
 								# self.txt.insert(END, '\n')
 								# self.txt.get(1.0, END)
+								self.openThread(result.stdout.splitlines()[1])
 								xList.append(result.stdout.splitlines()[1])
 								
 					except subprocess.CalledProcessError as e:

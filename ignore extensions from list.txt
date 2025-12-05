@@ -1,0 +1,5 @@
+.cfl
+.dat
+.1CD
+.lgp
+.lgf
