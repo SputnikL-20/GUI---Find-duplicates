@@ -78,7 +78,14 @@ class AppLayout:
 		self.lbl_display  = Label(frame_lbl_display, text=self.choose_directory, fg='white', bg='gray', justify=LEFT)  # , width=73, height=1
 		self.lbl_display.pack(side=LEFT, fill=X)
 		
+		# frame_lbl_display_test    = Frame(l_frame_navigator, bd=5, bg='orange')
+		# self.lbl_display_test  = Label(frame_lbl_display_test, text='TEST', fg='white', bg='gray', justify=LEFT)
+		# self.lbl_display_test.pack(side=LEFT, fill=X)
+		
+		
+		
 		frame_lbl_display.pack(anchor=CENTER, fill=X) # pack(side=LEFT, anchor=W) 
+		# frame_lbl_display_test.pack(anchor=CENTER, fill=X) 
 
 		frame_btn_command    = Frame(l_frame_navigator, bd=5, bg='red')
 		self.btn_cdir = Button(frame_btn_command, text='OPEN DIR',  width=11, command=self.chooseDirectory)
@@ -151,9 +158,11 @@ class AppLayout:
 	
 	def setFields(self, settings):
 		print(settings, type(settings))
+		self.walk(settings)
 		# self.txt.delete(1.0, END)	
 		# for i in range(len(listMD5)):
-		self.txt.insert(END, settings + '\n')
+		# self.lbl_display_test['text'] = settings
+		# self.txt.insert(END, settings + '\n')
 		# self.txt.insert(END, '\n')
 					
 		# self.sale_name.delete(0, END)
@@ -239,7 +248,9 @@ class AppLayout:
 			try:
 				if os.path.isdir(directory):
 					listMD5.clear()
-					self.walk(directory)
+					# self.walk(directory)
+					self.txt.delete(1.0, END)
+					self.openThread(directory)
 				else:
 					showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
 					
@@ -329,7 +340,10 @@ class AppLayout:
 								# self.txt.insert(END, [result.stdout.splitlines()[1], path])
 								# self.txt.insert(END, '\n')
 								# self.txt.get(1.0, END)
-								self.openThread(result.stdout.splitlines()[1])
+								self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
+								# self.txt.insert(END, '\n')
+								# self.lbl_display_test['text'] = result.stdout.splitlines()[1]
+								# self.openThread(result.stdout.splitlines()[1])
 								xList.append(result.stdout.splitlines()[1])
 								
 					except subprocess.CalledProcessError as e:
