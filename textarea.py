@@ -18,7 +18,7 @@ import _thread
 finalCatalog 	= ''
 inputExtension 	= '.pdf'
 availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
-except_extension = ['.cfl', '.dat']
+except_extension = ['.cfl']
 listMD5 		= []
 dMode			= True
 
@@ -48,6 +48,8 @@ class AppLayout:
 		
 		self.choose_directory = os.getcwd()
 		self.choose_file	  = os.getcwd()
+		
+		self.master = master
 
 		
 		# extensionFrame = LabelFrame(master, text='SELECTED EXTENSION', bg='gray')
@@ -62,11 +64,18 @@ class AppLayout:
 		self.combo_extension.current(0)
 		self.combo_extension.pack(side=LEFT)
 			
-		self.debug_mode = IntVar(); self.debug_mode.set(1)
-		# position = {"padx":6, "pady":6, "anchor":NW}
+		self.debug_mode = IntVar()
+		self.debug_mode.set(1)
 		debug_mode_checkbutton = ttk.Checkbutton(frame_settings, text="DEBUG MODE", variable=self.debug_mode, command=self.selectDebug)
+		# position = {"padx":6, "pady":6, "anchor":NW}
 		# debug_mode_checkbutton.pack(**position)
 		debug_mode_checkbutton.pack(side=RIGHT)
+		
+		self.include_nested_directories = IntVar()
+		self.include_nested_directories.set(0)
+		include_nested_dir = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_directories, command=self.getSettingNestedDirectories)
+		position = {"padx":6, "pady":6, "anchor":E, "side":RIGHT}; include_nested_dir.pack(**position)
+		
 		
 		frame_settings.pack(anchor=SW, fill=X)
 		l_frame_settings.pack(fill=X)
@@ -150,7 +159,7 @@ class AppLayout:
 		
 		
 		# side: выравнивает виджет по одной из сторон контейнера RIGHT (выравнивание по правой стороне), W: положение в левой части контейнера по центру
-		self.getIgnorExtensions()
+		# self.getIgnorExtensions()
 	
 	def openThread(self, settings):
 		_thread.start_new_thread(self.setFields, (settings,))
@@ -192,6 +201,12 @@ class AppLayout:
 			showinfo(title="Info", message="Режим отладки включен")
 		else:
 			showinfo(title="Info", message="Режим отладки отключен")
+			
+	def getSettingNestedDirectories(self):
+		if self.include_nested_directories.get() == 1:
+			showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
+		else:
+			showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
 		
 	def selectedExtension(self, event):
 		selection = self.combo_extension.get()
@@ -222,12 +237,17 @@ class AppLayout:
 			# f_hd.close()
 
 	def saveFile(self):
-		contents = self.txt.get(1.0, END)
-		new_file = fd.asksaveasfile(title="Сохранить файл", defaultextension=".txt", filetypes=(("Текстовый файл", "*.txt"),))
+		contents = self.txt.get(1.0, END)	
+		saved_file = self.lbl_display['text']
 		
-		if new_file:
-			new_file.write(contents)
-			new_file.close()
+		if os.path.isfile(saved_file):
+			with open(saved_file, 'w', encoding='UTF-8') as f_hd:
+				f_hd.write(contents)
+		else:
+			new_file = fd.asksaveasfile(title="Сохранить файл", defaultextension=".txt", filetypes=(("Текстовый файл", "*.txt"), ("Тестовый файл", "*.dat")))			
+			if new_file:
+				new_file.write(contents)
+				new_file.close()
 
 	def chooseDirectory(self):
 		directory = fd.askdirectory(title="Открыть папку", initialdir=self.choose_directory)
@@ -328,8 +348,8 @@ class AppLayout:
 									# print(f"dMode {dMode}", dMode)
 									
 									if self.debug_mode.get() != 1:
-										# dst = os.remove(path)
-										print("dst, 'move file in', path")
+										dst = os.remove(path)
+										print(dst, 'move file in', path)
 									
 								except ValueError as e:
 									print(f"ValueError {e}")
@@ -337,7 +357,7 @@ class AppLayout:
 							else:
 								# x.append(result.stdout.splitlines()[1])
 								# print(result.stdout.splitlines()[1], path)
-								# self.txt.insert(END, [result.stdout.splitlines()[1], path])
+								# self.txt.insert(END, (result.stdout.splitlines()[1], path))
 								# self.txt.insert(END, '\n')
 								# self.txt.get(1.0, END)
 								self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
@@ -353,27 +373,60 @@ class AppLayout:
 						logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
 					
 				else:
-					if os.path.isdir(path):
-						# print(f"Jamp {path}")
-						self.walk(path)
+					if self.include_nested_directories.get() != 0:
+						if os.path.isdir(path):
+							self.walk(path)		# print(f"Jamp {path}")
+					
 			except PermissionError as e:
 				logs.logWrite(f"PermissionError {e}")
 				continue
+	
+	
+	def dismissApp(self):			
+		self.master.quit()
 
 
-root = Tk()
+# root = Tk()
 
 # Установка отображения формы в центре экрана
-x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 3
-y = (root.winfo_screenheight() - root.winfo_reqheight()) / 3.5
+# x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 3
+# y = (root.winfo_screenheight() - root.winfo_reqheight()) / 3.5
 
-root.wm_geometry("+%d+%d" % (x, y))
+# root.wm_geometry("+%d+%d" % (x, y))
 
-obj = AppLayout(root)
+# obj = AppLayout(root)
 
 
 
-root.mainloop() 
+# root.mainloop() 
+
+
+
+def main():
+	root = Tk()
+	obj = AppLayout(root)
+
+	root.title("GUI - Find duplicates")
+	# root.iconbitmap(os.path.join(obj_cashier.cwd, 'src\\ico\\fptr_t.ico'))
+	root.geometry("900x600")
+	# root.resizable(False, False)
+
+	# Установка отображения формы в центре экрана
+	x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 3.5
+	y = (root.winfo_screenheight() - root.winfo_reqheight()) / 4
+
+	root.wm_geometry("+%d+%d" % (x, y))
+	root.protocol('WM_DELETE_WINDOW', obj.dismissApp)
+	
+	
+	obj.getIgnorExtensions()
+	
+	root.mainloop()
+
+
+if __name__=='__main__':
+	logs.logWrite("{} [{}]".format(os.getpid(), type(os.getpid())))
+	main()
 
 
 
