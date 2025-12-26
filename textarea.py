@@ -97,6 +97,10 @@ class AppLayout:
 		# frame_lbl_display_test.pack(anchor=CENTER, fill=X) 
 
 		frame_btn_command    = Frame(l_frame_navigator, bd=5, bg='red')
+		
+		self.btn_checksum = Button(frame_btn_command, text='SHA-512 CHECKSUM', width=20, command=self.checksumFile)
+		self.btn_checksum.pack(side=LEFT, anchor=W)
+		
 		self.btn_cdir = Button(frame_btn_command, text='OPEN DIR',  width=11, command=self.chooseDirectory)
 		self.btn_cdir.pack(side=RIGHT, anchor=E)
 		
@@ -115,7 +119,7 @@ class AppLayout:
 
 
 		l_frame_textarea     = LabelFrame(master, text='TXT AREA', bg='gray')
-		self.txt    = Text(l_frame_textarea, bg='#cdcdcd', wrap=NONE)
+		self.txt    = Text(l_frame_textarea, bg='#cdcdcd', fg='blue', wrap=NONE)
 		
 		
 		scrollY      = Scrollbar(l_frame_textarea, command=self.txt.yview)
@@ -212,6 +216,126 @@ class AppLayout:
 		selection = self.combo_extension.get()
 		# print(selection, type(selection))
 		return selection
+
+
+	def checksumFile(self):     
+		filetypes = (("Любой", "*"), ("Текстовый файл", "*.txt"), ("Изображение", "*.jpg *.gif *.png"))
+		filename = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
+		# MD5 = []
+		if filename:
+			# self.ent_cdir.delete(0, END)
+			# self.ent_cdir.insert(0, filename)
+			self.lbl_display['text'] = filename
+			# self.txt.delete(1.0, END)
+			# with open(filename, 'r', encoding='UTF-8') as f_hd:
+				# self.txt.insert(1.0, f_hd.read()) 
+				# список_строк = f_hd.readlines()
+				# MD5.append(f_hd.read())
+			# строки_без_переносов = [строка.rstrip('\n') for строка in список_строк]
+		
+			# print(строки_без_переносов, type(строки_без_переносов))
+			
+			# self.txt.insert(1.0, f_hd.read())
+			# f_hd = open(filename, encoding='utf-8') # encoding='utf-8'
+			# self.txt.insert(1.0, f_hd.read())
+			# f_hd.close()
+			
+			
+			path = filename	
+				
+			if os.path.isfile(path):
+				# print(f"path: {path}")
+				# txtQuit('q')
+				
+
+				basename, extension = os.path.splitext(path)
+				print(f"extension: {extension} basename: {basename}")
+				# txtQuit('q')
+				
+				# if extension in except_extension:
+					# print(f"Расширение {extension} в списке игнорируемых.") 
+					# continue
+					
+				
+					
+				file_size = os.path.getsize(path)
+				
+				if file_size > 0:
+					# print(f"Размер файла {path}: {file_size} байт", type(file_size))
+
+				# if len(inputExtension) > 0:
+					# if inputExtension.upper() != extension.upper():
+						# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+						# continue
+				# inputExtension = self.selectedExtension(self)
+				
+				# if inputExtension != 'ALL FILE EXTENSIONS':
+					# if inputExtension.upper() != extension.upper():
+						# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+						# continue
+					
+					checksum_file = self.getChecksum(path, 'SHA512')
+					if checksum_file != 0:
+						# self.txt.delete(1.0, END)
+						self.txt.insert(END, checksum_file + '\n')
+					
+					# try:
+						
+						# result = subprocess.run(
+							# ['Certutil', '-hashfile', path, 'SHA512'],	# Command and arguments 
+							# capture_output=True,  						# Capture stdout and stderr
+							# text=True,  								# Decode output as text
+							# check=True  								# Raise CalledProcessError on non-zero exit code
+						# )
+
+						# result = subprocess.run(['Certutil', '-hashfile', path, 'MD5'], capture_output=True, text=True, check=True)
+						# print(list(result.returncode))
+						# if result.returncode == 0:
+							# self.txt.delete(1.0, END)
+							# self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
+							# self.txt.insert(END, os.path.dirname(path) + '\n')
+							
+							# file_name = os.path.basename(path) # Вывод: my_file.txt
+							# file_checksum = os.path.join(os.path.dirname(path), file_name + '_Контрольная сумма SHA-512.dat')
+							# if os.path.isfile(saved_file):
+							# with open(file_checksum, 'w', encoding='UTF-8') as f_hd:
+								# f_hd.write(result.stdout.splitlines()[1])
+				
+								
+					# except subprocess.CalledProcessError as e:
+						# print(f"Command failed with error: {e}")
+						# print("Stderr:", e.stderr)
+						# print(e.stderr)
+						# logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
+				else:
+					showinfo(title="Info", message="Файл без данных!")
+			# else:
+				# if self.include_nested_directories.get() != 0:
+					# if os.path.isdir(path):
+						# self.walk(path)		# print(f"Jamp {path}")
+						
+						
+	def getChecksum(self, path, check):
+		
+		checksum_file = 0
+				
+		try:		
+			result = subprocess.run(
+				['Certutil', '-hashfile', path, check],		# Command and arguments 
+				capture_output=True,  						# Capture stdout and stderr
+				text=True,  								# Decode output as text
+				check=True  								# Raise CalledProcessError on non-zero exit code
+			)
+
+			if result.returncode == 0:
+				checksum_file = result.stdout.splitlines()[1]				
+					
+		except subprocess.CalledProcessError as e:
+			print(f"Command failed with error: {e}")
+			logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
+			
+		return checksum_file
+
 
 
 	def chooseFile(self):     
@@ -408,7 +532,7 @@ def main():
 
 	root.title("GUI - Find duplicates")
 	# root.iconbitmap(os.path.join(obj_cashier.cwd, 'src\\ico\\fptr_t.ico'))
-	root.geometry("900x600")
+	root.geometry("1100x600")
 	# root.resizable(False, False)
 
 	# Установка отображения формы в центре экрана
