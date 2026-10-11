@@ -15,12 +15,14 @@ import subprocess
 import _thread
 	
 
+DebugMode		= True
 finalCatalog 	= ''
 inputExtension 	= '.pdf'
-availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
-except_extension = ['.cfl']
+# availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
+except_extension = ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
 listMD5 		= []
-dMode			= True
+
+
 
 
 def txtQuit(q):
@@ -58,7 +60,7 @@ class AppLayout:
 		frame_settings    = Frame(l_frame_settings, bd=5, bg='blue')
 		# self.ent_cdir = Entry(frame_settings, bg='green', width=100)
 		
-		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.epf', '.erf', 'ALL FILE EXTENSIONS')	
+		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.mp3','.epf', '.erf', '.AVI', 'ALL FILE EXTENSIONS')	
 		self.combo_extension = ttk.Combobox(frame_settings, width=11, values=self.combo_extension_val, state=NORMAL)
 		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
 		self.combo_extension.current(0)
@@ -150,7 +152,7 @@ class AppLayout:
 		
 		
 
-		
+		self.xListPath = []
 		
 		
 		
@@ -165,24 +167,27 @@ class AppLayout:
 		# side: выравнивает виджет по одной из сторон контейнера RIGHT (выравнивание по правой стороне), W: положение в левой части контейнера по центру
 		# self.getIgnorExtensions()
 	
-	def openThread(self, settings):
-		_thread.start_new_thread(self.setFields, (settings,))
+	# def openThread(self, settings):
+		# _thread.start_new_thread(self.setFields, (settings,))
 	
 	
-	def setFields(self, settings):
-		print(settings, type(settings))
-		self.walk(settings)
+	def setFields(self, path):
+		print(f"Поиск в дирректории: {path}", type(path))
+		self.xListPath = []
+		self.walk(path)
+		showinfo(title="Info", message="Спасибо! Поиск закончен.")
+		# breakpoint()
 		# self.txt.delete(1.0, END)	
 		# for i in range(len(listMD5)):
-		# self.lbl_display_test['text'] = settings
-		# self.txt.insert(END, settings + '\n')
+		# self.lbl_display_test['text'] = path
+		# self.txt.insert(END, path + '\n')
 		# self.txt.insert(END, '\n')
 					
 		# self.sale_name.delete(0, END)
-		# self.sale_name.insert(0, settings['name'])
+		# self.sale_name.insert(0, path['name'])
 		# self.sale_address.delete(0, END)
-		# self.sale_address.insert(0, settings['address'])
-		# self.cash_model.current(settings['model'])
+		# self.sale_address.insert(0, path['address'])
+		# self.cash_model.current(path['model'])
 	
 		
 	def getIgnorExtensions(self):
@@ -207,9 +212,9 @@ class AppLayout:
 			showinfo(title="Info", message="Режим отладки отключен")
 			
 	def getSettingNestedDirectories(self):
-		if self.include_nested_directories.get() == 1:
-			showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
-		else:
+		if not self.include_nested_directories.get() == 1:
+			# showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
+		# else:
 			showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
 		
 	def selectedExtension(self, event):
@@ -276,7 +281,7 @@ class AppLayout:
 					
 					checksum_file = self.getChecksum(path, 'SHA512')
 					if checksum_file != 0:
-						# self.txt.delete(1.0, END)
+						self.txt.delete(1.0, END)
 						self.txt.insert(END, checksum_file + '\n')
 					
 					# try:
@@ -380,10 +385,10 @@ class AppLayout:
 			self.lbl_display['text'] = directory
 			self.choose_directory = directory
 			# self.walk(directory)
-			
-		# for i in range(len(listMD5)):
-			# self.txt.insert(END, listMD5[i])
-			# self.txt.insert(END, '\n')
+		
+		for i in range(len(listMD5)):
+			self.txt.insert(END, listMD5[i])
+			self.txt.insert(END, '\n')
 			
 	def findDoubles(self):
 		directory = self.lbl_display['text']
@@ -391,10 +396,10 @@ class AppLayout:
 		if directory:
 			try:
 				if os.path.isdir(directory):
+					self.openThread(directory)
 					listMD5.clear()
 					# self.walk(directory)
-					self.txt.delete(1.0, END)
-					self.openThread(directory)
+					self.txt.delete(1.0, END)   # Очистка textarea
 				else:
 					showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
 					
@@ -405,13 +410,19 @@ class AppLayout:
 				
 			except FileNotFoundError as e:
 				logs.logWrite(f"FileNotFoundError {e}")
+				
+	def openThread(self, directory):
+		_thread.start_new_thread(self.setFields, (directory,))
+		
 	
 	
 	def walk(self, dirname):
-		print(f"Curent dir: {dirname}")
 		
-		dMode = True
+		
+		DebugMode = True
 		xList = listMD5
+		# xListPath = []
+		# print(len(xList))
 		
 		for name in os.listdir(dirname):
 
@@ -419,7 +430,7 @@ class AppLayout:
 				
 				path = os.path.join(dirname, name)
 				
-				if os.path.isfile(path):
+				if os.path.isfile(path):	#														Если это Файл ?
 					# print(f"path: {path}")
 					# txtQuit('q')
 					
@@ -429,13 +440,13 @@ class AppLayout:
 					# txtQuit('q')
 					
 					if extension in except_extension:
-						print(f"Расширение {extension} в списке игнорируемых.") 
+						# print(f"Расширение {extension} в списке игнорируемых.") 
 						continue
 						
 					file_size = os.path.getsize(path)
-					
-					if not file_size > 0:
-						print(f"Размер файла {path}: {file_size} байт", type(file_size))
+					# print(f"Curent dir: {dirname} {len(xList)}")
+					if not file_size > 0:	#														... и Файл больше ноля
+						# print(f"Размер файла {path}: {file_size} байт", type(file_size))
 						continue
 
 					# if len(inputExtension) > 0:
@@ -445,8 +456,9 @@ class AppLayout:
 					inputExtension = self.selectedExtension(self)
 					
 					if inputExtension != 'ALL FILE EXTENSIONS':
+						
 						if inputExtension.upper() != extension.upper():
-							print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+							# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", basename + extension.upper())
 							continue
 					
 					try:
@@ -462,18 +474,28 @@ class AppLayout:
 						# print(list(result.returncode))
 						if result.returncode == 0:
 							# print(len(xList), " ", result.stdout.splitlines()[1])
-							# print(len(xList))
-							if result.stdout.splitlines()[1] in xList: #  xList.index(result.stdout.splitlines()[1]):
+							Code_SHA1 = result.stdout.splitlines()[1]
+							
+							if Code_SHA1 in xList:
+							
+								for iLisx in self.xListPath:
+									for i in iLisx:
+										if Code_SHA1 in i:
+											print(f"Найдена копия {iLisx[1]} в: {path}")
 								
 								try:
-									index = xList.index(result.stdout.splitlines()[1])
-									print("xList count", len(xList), f"Index [{index}]", f"find {result.stdout.splitlines()[1]}", path)
+									index = xList.index(Code_SHA1)
+									print("xList count", len(xList), f"Index [{index}]", f"find {Code_SHA1}", path)
 									# print()
-									# print(f"dMode {dMode}", dMode)
+									# print(f"DebugMode {DebugMode}", DebugMode)
+									str = f"COUNT xList {len(xList)}; " + f"Index [{index}]; " + f"find {Code_SHA1}; " + path
+									self.txt.insert(END, str + '\n')
 									
 									if self.debug_mode.get() != 1:
 										dst = os.remove(path)
 										print(dst, 'move file in', path)
+										str = f"REMOVE file in: " + path
+										self.txt.insert(END, str + '\n')
 									
 								except ValueError as e:
 									print(f"ValueError {e}")
@@ -484,14 +506,21 @@ class AppLayout:
 								# self.txt.insert(END, (result.stdout.splitlines()[1], path))
 								# self.txt.insert(END, '\n')
 								# self.txt.get(1.0, END)
-								self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
+								# self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
 								# self.txt.insert(END, '\n')
 								# self.lbl_display_test['text'] = result.stdout.splitlines()[1]
 								# self.openThread(result.stdout.splitlines()[1])
-								xList.append(result.stdout.splitlines()[1])
+								
+								xList.append(Code_SHA1)
+								
+								# xListPath = [Code_SHA1, path]
+								
+								self.xListPath.append([Code_SHA1, path])
+								
+								# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
 								
 					except subprocess.CalledProcessError as e:
-						print(f"Command failed with error: {e}")
+						# print(f"Command failed with error: {e}")
 						# print("Stderr:", e.stderr)
 						# print(e.stderr)
 						logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
@@ -504,6 +533,8 @@ class AppLayout:
 			except PermissionError as e:
 				logs.logWrite(f"PermissionError {e}")
 				continue
+				
+		# breakpoint()
 	
 	
 	def dismissApp(self):			
