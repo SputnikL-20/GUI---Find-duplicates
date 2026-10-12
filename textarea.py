@@ -61,22 +61,23 @@ class AppLayout:
 		# self.ent_cdir = Entry(frame_settings, bg='green', width=100)
 		
 		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.mp3','.epf', '.erf', '.AVI', 'ALL FILE EXTENSIONS')	
-		self.combo_extension = ttk.Combobox(frame_settings, width=11, values=self.combo_extension_val, state=NORMAL)
+		self.combo_extension = ttk.Combobox(frame_settings, width=15, values=self.combo_extension_val, state=NORMAL)
 		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
 		self.combo_extension.current(0)
 		self.combo_extension.pack(side=LEFT)
 			
 		self.debug_mode = IntVar()
 		self.debug_mode.set(1)
-		debug_mode_checkbutton = ttk.Checkbutton(frame_settings, text="DEBUG MODE", variable=self.debug_mode, command=self.selectDebug)
+		self.debug_mode_checkbutton = ttk.Checkbutton(frame_settings, text="DEBUG MODE", variable=self.debug_mode, command=self.selectDebug)
 		# position = {"padx":6, "pady":6, "anchor":NW}
-		# debug_mode_checkbutton.pack(**position)
-		debug_mode_checkbutton.pack(side=RIGHT)
+		# self.debug_mode_checkbutton.pack(**position)
+		self.debug_mode_checkbutton.pack(side=RIGHT)
 		
 		self.include_nested_directories = IntVar()
 		self.include_nested_directories.set(0)
-		include_nested_dir = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_directories, command=self.getSettingNestedDirectories)
-		position = {"padx":6, "pady":6, "anchor":E, "side":RIGHT}; include_nested_dir.pack(**position)
+		self.include_nested_dir = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_directories, command=self.getSettingNestedDirectories)
+		position = {"padx":6, "pady":6, "anchor":E, "side":RIGHT}; 
+		self.include_nested_dir.pack(**position)
 		
 		
 		frame_settings.pack(anchor=SW, fill=X)
@@ -172,9 +173,13 @@ class AppLayout:
 	
 	
 	def setFields(self, path):
-		print(f"Поиск в дирректории: {path}", type(path))
+		self.txt.delete(1.0, END)   # Очистка textarea
+		self.lock_ui()
+		print(f"Поиск в дирректории: {path}")	# , type(path)
+		listMD5.clear()
 		self.xListPath = []
 		self.walk(path)
+		self.unlock_ui()
 		showinfo(title="Info", message="Спасибо! Поиск закончен.")
 		# breakpoint()
 		# self.txt.delete(1.0, END)	
@@ -377,29 +382,25 @@ class AppLayout:
 			if new_file:
 				new_file.write(contents)
 				new_file.close()
-
+	
+	
 	def chooseDirectory(self):
-		directory = fd.askdirectory(title="Открыть папку", initialdir=self.choose_directory)
 		
-		if directory:
-			self.lbl_display['text'] = directory
-			self.choose_directory = directory
-			# self.walk(directory)
+		dir = fd.askdirectory(title="Выбрать папку для поиска файлов", initialdir=self.choose_directory)
 		
-		for i in range(len(listMD5)):
-			self.txt.insert(END, listMD5[i])
-			self.txt.insert(END, '\n')
-			
+		if os.path.isdir(dir):
+			self.lbl_display['text'] = dir
+			self.choose_directory = dir
+	
+	
 	def findDoubles(self):
+		
 		directory = self.lbl_display['text']
 			
 		if directory:
 			try:
 				if os.path.isdir(directory):
 					self.openThread(directory)
-					listMD5.clear()
-					# self.walk(directory)
-					self.txt.delete(1.0, END)   # Очистка textarea
 				else:
 					showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
 					
@@ -410,14 +411,13 @@ class AppLayout:
 				
 			except FileNotFoundError as e:
 				logs.logWrite(f"FileNotFoundError {e}")
+		
 				
 	def openThread(self, directory):
 		_thread.start_new_thread(self.setFields, (directory,))
-		
 	
 	
 	def walk(self, dirname):
-		
 		
 		DebugMode = True
 		xList = listMD5
@@ -464,7 +464,7 @@ class AppLayout:
 					try:
 						
 						result = subprocess.run(
-							['Certutil', '-hashfile', path, 'SHA1'],			# Command and arguments 
+							['Certutil', '-hashfile', path, 'SHA1'],	# Command and arguments 
 							capture_output=True,  						# Capture stdout and stderr
 							text=True,  								# Decode output as text
 							check=True  								# Raise CalledProcessError on non-zero exit code
@@ -473,23 +473,22 @@ class AppLayout:
 						# result = subprocess.run(['Certutil', '-hashfile', path, 'MD5'], capture_output=True, text=True, check=True)
 						# print(list(result.returncode))
 						if result.returncode == 0:
-							# print(len(xList), " ", result.stdout.splitlines()[1])
 							Code_SHA1 = result.stdout.splitlines()[1]
 							
 							if Code_SHA1 in xList:
-							
+								
 								for iLisx in self.xListPath:
 									for i in iLisx:
 										if Code_SHA1 in i:
-											print(f"Найдена копия {iLisx[1]} в: {path}")
+											str = f"Найдена копия {iLisx[1]} в: {path}"
+											self.txt.insert(END, str + '\n')
+											# print(str)
 								
 								try:
 									index = xList.index(Code_SHA1)
 									print("xList count", len(xList), f"Index [{index}]", f"find {Code_SHA1}", path)
 									# print()
 									# print(f"DebugMode {DebugMode}", DebugMode)
-									str = f"COUNT xList {len(xList)}; " + f"Index [{index}]; " + f"find {Code_SHA1}; " + path
-									self.txt.insert(END, str + '\n')
 									
 									if self.debug_mode.get() != 1:
 										dst = os.remove(path)
@@ -517,7 +516,7 @@ class AppLayout:
 								
 								self.xListPath.append([Code_SHA1, path])
 								
-								# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
+								print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
 								
 					except subprocess.CalledProcessError as e:
 						# print(f"Command failed with error: {e}")
@@ -528,7 +527,7 @@ class AppLayout:
 				else:
 					if self.include_nested_directories.get() != 0:
 						if os.path.isdir(path):
-							self.walk(path)		# print(f"Jamp {path}")
+							self.walk(path)
 					
 			except PermissionError as e:
 				logs.logWrite(f"PermissionError {e}")
@@ -539,6 +538,51 @@ class AppLayout:
 	
 	def dismissApp(self):			
 		self.master.quit()
+		
+	# def set_widgets_state(self, parent, state="disabled"):
+		# for child in parent.winfo_children():
+			# Рекурсивно проверяем вложенные фреймы
+			# if child.winfo_children():
+				# set_widgets_state(child, state)
+			# try:
+				# child.configure(state=state)
+			# except:
+				# Некоторые виджеты (например, Frame или Label) не имеют состояния state
+				# print("DANDGER!")
+				# pass
+				
+	# Функция блокировки всего интерфейса
+	def lock_ui(self):
+		# self.set_widgets_state(self.master, "disabled")
+		state="disabled"
+		self.btn_open.configure(state=state)
+		self.btn_save.configure(state=state)
+		self.btn_cdir.configure(state=state)
+		self.btn_checksum.configure(state=state)
+		self.btn_open.configure(state=state)
+		self.btn_find.configure(state=state)
+		self.combo_extension.configure(state=state)
+
+		self.lbl_display.configure(state=state)
+		self.include_nested_dir.configure(state=state)
+		self.debug_mode_checkbutton.configure(state=state)
+
+
+	# Функция разблокировки
+	def unlock_ui(self):
+		# self.set_widgets_state(self.master, "normal")
+		state="normal"
+		self.btn_open.configure(state=state)
+		self.btn_save.configure(state=state)
+		self.btn_cdir.configure(state=state)
+		self.btn_checksum.configure(state=state)
+		self.btn_open.configure(state=state)
+		self.btn_find.configure(state=state)
+		self.combo_extension.configure(state=state)
+
+		self.lbl_display.configure(state=state)
+		self.include_nested_dir.configure(state=state)
+		self.debug_mode_checkbutton.configure(state=state)
 
 
 # root = Tk()
