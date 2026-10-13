@@ -17,7 +17,7 @@ import _thread
 
 DebugMode		= True
 finalCatalog 	= ''
-selected_extension 	= '.pdf'
+selected_extension 	= '.pdf'	# defaultextension
 # availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
 except_extension = [] # ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
 listMD5 		= []
@@ -39,6 +39,9 @@ def txtDebug(val = ''):
 	
 def extUpper(extension):
 	return extension.upper()
+	
+# def extUpper(extension):
+	# return extension.upper()
 
 
 
@@ -50,11 +53,14 @@ class AppLayout:
 
 	def __init__(self, master):
 		
-		self.choose_directory = os.getcwd()
-		self.choose_file	  = os.getcwd()
-		
 		self.master = master
-
+		
+		
+		# if os.getcwd() != self.lbl_display['text'] and len(self.lbl_display['text']) != 0:
+		self.choose_file = os.getcwd()
+		# else:
+		self.choose_directory = os.getcwd()
+		
 		
 		# extensionFrame = LabelFrame(master, text='SELECTED EXTENSION', bg='gray')
 
@@ -89,13 +95,15 @@ class AppLayout:
 		l_frame_navigator = LabelFrame(master, text='NAVIGATOR', bg='gray')
 
 		frame_lbl_display    = Frame(l_frame_navigator, bd=5, bg='orange')
-		self.lbl_display  = Label(frame_lbl_display, text=self.choose_directory, fg='white', bg='gray', justify=LEFT)  # , width=73, height=1
+		self.lbl_display  = Label(frame_lbl_display, text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1)
 		self.lbl_display.pack(side=LEFT, fill=X)
 		
 		# frame_lbl_display_test    = Frame(l_frame_navigator, bd=5, bg='orange')
 		# self.lbl_display_test  = Label(frame_lbl_display_test, text='TEST', fg='white', bg='gray', justify=LEFT)
 		# self.lbl_display_test.pack(side=LEFT, fill=X)
 		
+		
+
 		
 		
 		frame_lbl_display.pack(anchor=CENTER, fill=X) # pack(side=LEFT, anchor=W) 
@@ -124,8 +132,7 @@ class AppLayout:
 		
 		frame_btn_command.pack(anchor=CENTER, fill=X) # E: положение в правой части контейнера по центру
 		l_frame_navigator.pack(fill=X)
-
-
+		
 		l_frame_textarea     = LabelFrame(master, text='TXT AREA', bg='gray')
 		self.txt    = Text(l_frame_textarea, bg='#cdcdcd', fg='blue', wrap=NONE)
 		
@@ -140,6 +147,7 @@ class AppLayout:
 		self.txt.config(xscrollcommand=scrollX.set)
 		
 		self.txt.pack(expand=1, fill=BOTH)
+		self.txt.bind("<<Selection>>", self.on_modified)
 		
 		l_frame_textarea.pack(expand=1, fill=BOTH)
 
@@ -157,16 +165,20 @@ class AppLayout:
 		
 		
 		
-
+		
 		self.xListPath = []
 		
 		
-		
-		
-		
 
 		
-		# extensionFrame.pack(fill=X)
+		
+	def on_modified(self, event):
+		try:
+			self.lbl_display["text"] = self.txt.selection_get()
+		except:
+			print("Ошибка")
+
+	# extensionFrame.pack(fill=X)
 		
 		
 		
@@ -244,14 +256,17 @@ class AppLayout:
 		return extension
 
 
-	def checksumFile(self):     
-		filetypes = (("Любой", "*"), ("Текстовый файл", "*.txt"), ("Изображение", "*.jpg *.gif *.png"))
-		filename = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
+	def checksumFile(self):
+		# filetypes = (("Любой", "*"), ("Текстовый файл", "*.txt"), ("Изображение", "*.jpg *.gif *.png"))
+		# filename = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
 		# MD5 = []
-		if filename:
+		
+		# print(filename)
+		if os.path.isfile(self.lbl_display['text']):
+			filename = self.lbl_display['text']
 			# self.ent_cdir.delete(0, END)
 			# self.ent_cdir.insert(0, filename)
-			self.lbl_display['text'] = filename
+			# self.lbl_display['text'] = filename
 			# self.txt.delete(1.0, END)
 			# with open(filename, 'r', encoding='UTF-8') as f_hd:
 				# self.txt.insert(1.0, f_hd.read()) 
@@ -275,7 +290,7 @@ class AppLayout:
 				
 
 				basename, extension = os.path.splitext(path)
-				print(f"extension: {extension} basename: {basename}")
+				# print(f"extension: {extension} basename: {basename}")
 				# txtQuit('q')
 				
 				# if extension in except_extension:
@@ -354,18 +369,21 @@ class AppLayout:
 			)
 
 			if result.returncode == 0:
-				checksum_file = result.stdout.splitlines()[1]				
+				checksum_file = result.stdout.splitlines()[1]
+			if checksum_file != 0:
+				checksum = checksum_file
 					
 		except subprocess.CalledProcessError as e:
 			print(f"Command failed with error: {e}")
 			logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
 			
-		return checksum_file
+		return checksum
 
 
 
-	def chooseFile(self):     
-		filetypes = (("Текстовый файл", "*.txt"), ("Изображение", "*.jpg *.gif *.png"), ("Любой", "*"))
+	def chooseFile(self):
+		self.choose_file = self.lbl_display['text']
+		filetypes = (("Любой", "*"), ("Изображение", "*.jpg *.gif *.png"), ("Текстовый файл", "*.txt"))
 		filename = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
 		# MD5 = []
 		if filename:
@@ -401,8 +419,9 @@ class AppLayout:
 	
 	
 	def chooseDirectory(self):
-		
-		dir = fd.askdirectory(title="Выбрать папку для поиска файлов", initialdir=self.choose_directory)
+		dir = self.lbl_display["text"]
+		dir = fd.askdirectory(title="Выбрать папку для поиска файлов", initialdir=dir)	# self.choose_directory
+		print(self.lbl_display["text"])
 		
 		if os.path.isdir(dir):
 			self.lbl_display['text'] = dir
@@ -470,60 +489,66 @@ class AppLayout:
 					
 					try:
 						
-						result = subprocess.run(
-							['Certutil', '-hashfile', path, 'SHA1'],	# Command and arguments 
-							capture_output=True,  						# Capture stdout and stderr
-							text=True,  								# Decode output as text
-							check=True  								# Raise CalledProcessError on non-zero exit code
-						)
+						# result = subprocess.run(
+							# ['Certutil', '-hashfile', path, 'SHA1'],	# Command and arguments 
+							# capture_output=True,  						# Capture stdout and stderr
+							# text=True,  								# Decode output as text
+							# check=True  								# Raise CalledProcessError on non-zero exit code
+						# )
+						
+						
+						Code_Checksum = self.getChecksum(path, 'SHA512')
+						# if checksum_file != 0:
+							# self.txt.delete(1.0, END)
+							# self.txt.insert(END, checksum_file + '\n')
 
 						# result = subprocess.run(['Certutil', '-hashfile', path, 'MD5'], capture_output=True, text=True, check=True)
 						# print(list(result.returncode))
-						if result.returncode == 0:
-							Code_SHA1 = result.stdout.splitlines()[1]
+						# if result.returncode == 0:
+						# Code_Checksum = result.stdout.splitlines()[1]
+						
+						if Code_Checksum in xList:
 							
-							if Code_SHA1 in xList:
-								
-								for iLisx in self.xListPath:
-									for i in iLisx:
-										if Code_SHA1 in i:
-											str = f"Найдена копия файла: {iLisx[1]} в: {path}"
-											self.txt.insert(END, str + '\n')
-											logs.logWrite(str)
-								
-								try:
-									index = xList.index(Code_SHA1)
-									print("xList count", len(xList), f"Index [{index}]", f"find {Code_SHA1}", path)
-									# print()
-									# print(f"DebugMode {DebugMode}", DebugMode)
-									
-									if self.debug_mode.get() != 1:
-										dst = os.remove(path)
-										print(dst, 'move file in', path)
-										str = f"REMOVE file in: " + path
+							for iLisx in self.xListPath:
+								for i in iLisx:
+									if Code_Checksum in i:
+										str = f"Найдена копия файла: {iLisx[1]} в: {path}"
 										self.txt.insert(END, str + '\n')
-									
-								except ValueError as e:
-									print(f"ValueError {e}")
+										logs.logWrite(str)
+							
+							try:
+								index = xList.index(Code_Checksum)
+								print("xList count", len(xList), f"Index [{index}]", f"find {Code_Checksum}", path)
+								# print()
+								# print(f"DebugMode {DebugMode}", DebugMode)
 								
-							else:
-								# x.append(result.stdout.splitlines()[1])
-								# print(result.stdout.splitlines()[1], path)
-								# self.txt.insert(END, (result.stdout.splitlines()[1], path))
-								# self.txt.insert(END, '\n')
-								# self.txt.get(1.0, END)
-								# self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
-								# self.txt.insert(END, '\n')
-								# self.lbl_display_test['text'] = result.stdout.splitlines()[1]
-								# self.openThread(result.stdout.splitlines()[1])
+								if self.debug_mode.get() != 1:
+									dst = os.remove(path)
+									print(dst, 'move file in', path)
+									str = f"REMOVE file in: " + path
+									self.txt.insert(END, str + '\n')
 								
-								xList.append(Code_SHA1)
-								
-								# xListPath = [Code_SHA1, path]
-								
-								self.xListPath.append([Code_SHA1, path])
-								
-								# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
+							except ValueError as e:
+								print(f"ValueError {e}")
+							
+						else:
+							# x.append(result.stdout.splitlines()[1])
+							# print(result.stdout.splitlines()[1], path)
+							# self.txt.insert(END, (result.stdout.splitlines()[1], path))
+							# self.txt.insert(END, '\n')
+							# self.txt.get(1.0, END)
+							# self.txt.insert(END, result.stdout.splitlines()[1] + '\n')
+							# self.txt.insert(END, '\n')
+							# self.lbl_display_test['text'] = result.stdout.splitlines()[1]
+							# self.openThread(result.stdout.splitlines()[1])
+							
+							xList.append(Code_Checksum)
+							
+							# xListPath = [Code_Checksum, path]
+							
+							self.xListPath.append([Code_Checksum, path])
+							
+							# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
 								
 					except subprocess.CalledProcessError as e:
 						# print(f"Command failed with error: {e}")
