@@ -17,9 +17,9 @@ import _thread
 
 DebugMode		= True
 finalCatalog 	= ''
-inputExtension 	= '.pdf'
+selected_extension 	= '.pdf'
 # availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
-except_extension = ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
+except_extension = [] # ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
 listMD5 		= []
 
 
@@ -31,12 +31,14 @@ def txtQuit(q):
 		quit()
 		
 
-def txtDebug(val = ''):
-	
+def txtDebug(val = ''):	
 	if len(val) > 0 and val.upper() == 'Y':
 		print('Install mode: --> DEBUG PROGRAMM')
 		return True
 	return False
+	
+def extUpper(extension):
+	return extension.upper()
 
 
 
@@ -60,7 +62,7 @@ class AppLayout:
 		frame_settings    = Frame(l_frame_settings, bd=5, bg='blue')
 		# self.ent_cdir = Entry(frame_settings, bg='green', width=100)
 		
-		self.combo_extension_val = ('.png', '.jpg', '.pdf', '.xlsx', '.xls', '.doc', '.docx', '.mp3','.epf', '.erf', '.AVI', 'ALL FILE EXTENSIONS')	
+		self.combo_extension_val = ('.PNG', '.JPG', '.PDF', '.XLSX', '.XLS', '.DOC', '.DOCX', '.MP3','.EPF', '.ERF', '.AVI', 'ALL FILES')	
 		self.combo_extension = ttk.Combobox(frame_settings, width=15, values=self.combo_extension_val, state=NORMAL)
 		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
 		self.combo_extension.current(0)
@@ -73,11 +75,11 @@ class AppLayout:
 		# self.debug_mode_checkbutton.pack(**position)
 		self.debug_mode_checkbutton.pack(side=RIGHT)
 		
-		self.include_nested_directories = IntVar()
-		self.include_nested_directories.set(0)
-		self.include_nested_dir = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_directories, command=self.getSettingNestedDirectories)
+		self.include_nested_dir = IntVar()
+		self.include_nested_dir.set(0)
+		self.include_nested_dir_checkbutton = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_dir, command=self.getSettingNestedDir)
 		position = {"padx":6, "pady":6, "anchor":E, "side":RIGHT}; 
-		self.include_nested_dir.pack(**position)
+		self.include_nested_dir_checkbutton.pack(**position)
 		
 		
 		frame_settings.pack(anchor=SW, fill=X)
@@ -103,6 +105,9 @@ class AppLayout:
 		
 		self.btn_checksum = Button(frame_btn_command, text='SHA-512 CHECKSUM', width=20, command=self.checksumFile)
 		self.btn_checksum.pack(side=LEFT, anchor=W)
+		
+		self.btn_logs = Button(frame_btn_command, text="View Log'S", width=11, command=self.loadLogTxt)
+		self.btn_logs.pack(side=LEFT, anchor=W)
 		
 		self.btn_cdir = Button(frame_btn_command, text='OPEN DIR',  width=11, command=self.chooseDirectory)
 		self.btn_cdir.pack(side=RIGHT, anchor=E)
@@ -175,17 +180,19 @@ class AppLayout:
 	def setFields(self, path):
 		self.txt.delete(1.0, END)   # Очистка textarea
 		self.lock_ui()
-		print(f"Поиск в дирректории: {path}")	# , type(path)
+		print(f"Поиск в дирректории: {path}")
+		logs.logWrite(f"Поиск в дирректории: {path}")
 		listMD5.clear()
 		self.xListPath = []
 		self.walk(path)
 		self.unlock_ui()
-		showinfo(title="Info", message="Спасибо! Поиск закончен.")
+		showinfo(title="", message="Спасибо! Поиск закончен.")
+		logs.logWrite(f"Поиск закончен...\n")
 		# breakpoint()
-		# self.txt.delete(1.0, END)	
+		# 	
 		# for i in range(len(listMD5)):
 		# self.lbl_display_test['text'] = path
-		# self.txt.insert(END, path + '\n')
+		# 
 		# self.txt.insert(END, '\n')
 					
 		# self.sale_name.delete(0, END)
@@ -194,20 +201,29 @@ class AppLayout:
 		# self.sale_address.insert(0, path['address'])
 		# self.cash_model.current(path['model'])
 	
-		
+	
+	def loadLogTxt(self):	
+		filename = os.path.join(os.getcwd(), 'file-log.log')
+		if os.path.isfile(filename):
+			# Очищаем поле текстового документа
+			self.txt.delete(1.0, END)
+			# читаем построчно с помощью `for`
+			with open(filename, 'r', encoding='UTF-8') as f_hd:
+				for line in f_hd:
+					# Вставляем строку в конец списка
+					self.txt.insert(END, line)
+	
+	
 	def getIgnorExtensions(self):
-		filename = os.path.join(self.choose_directory, 'ignore extensions from list.txt') 
+		filename = os.path.join(self.choose_directory, 'ignore_extensions.dat') 
 		with open(filename, 'r', encoding='UTF-8') as f_hd:
 			# list_of_string = f_hd.read()	# <class 'str'>
 			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'>
 		# print(list_of_val_with_line_breaks, type(list_of_val_with_line_breaks))
-		list_of_values = [value.rstrip('\n') for value in list_of_val_with_line_breaks]
-	
-		# print(list_of_values, type(list_of_values))
-		
+		list_of_values = [value.rstrip('\n').upper() for value in list_of_val_with_line_breaks]
+		# print(list_of_values, type(list_of_values))		
 		except_extension.extend(list_of_values)
-		
-		# print(except_extension, type(except_extension))
+		logs.logWrite(f"Список игнорируемых расширений: {except_extension}")
 	
 	
 	def selectDebug(self):
@@ -216,16 +232,16 @@ class AppLayout:
 		else:
 			showinfo(title="Info", message="Режим отладки отключен")
 			
-	def getSettingNestedDirectories(self):
-		if not self.include_nested_directories.get() == 1:
+	def getSettingNestedDir(self):
+		if not self.include_nested_dir.get() == 1:
 			# showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
 		# else:
 			showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
 		
 	def selectedExtension(self, event):
-		selection = self.combo_extension.get()
-		# print(selection, type(selection))
-		return selection
+		extension = self.combo_extension.get()
+		# print(extension, type(extension))
+		return extension
 
 
 	def checksumFile(self):     
@@ -273,15 +289,15 @@ class AppLayout:
 				if file_size > 0:
 					# print(f"Размер файла {path}: {file_size} байт", type(file_size))
 
-				# if len(inputExtension) > 0:
-					# if inputExtension.upper() != extension.upper():
-						# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+				# if len(selected_extension) > 0:
+					# if selected_extension.upper() != extension.upper():
+						# print("Расширения не совпадают", "selected_extension =", selected_extension.upper(), "и extension =", extension.upper())
 						# continue
-				# inputExtension = self.selectedExtension(self)
+				# selected_extension = self.selectedExtension(self)
 				
-				# if inputExtension != 'ALL FILE EXTENSIONS':
-					# if inputExtension.upper() != extension.upper():
-						# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+				# if selected_extension != 'ALL FILE EXTENSIONS':
+					# if selected_extension.upper() != extension.upper():
+						# print("Расширения не совпадают", "selected_extension =", selected_extension.upper(), "и extension =", extension.upper())
 						# continue
 					
 					checksum_file = self.getChecksum(path, 'SHA512')
@@ -320,7 +336,7 @@ class AppLayout:
 				else:
 					showinfo(title="Info", message="Файл без данных!")
 			# else:
-				# if self.include_nested_directories.get() != 0:
+				# if self.include_nested_dir.get() != 0:
 					# if os.path.isdir(path):
 						# self.walk(path)		# print(f"Jamp {path}")
 						
@@ -396,23 +412,16 @@ class AppLayout:
 	def findDoubles(self):
 		
 		directory = self.lbl_display['text']
-			
-		if directory:
+	
+		if os.path.isdir(directory):
 			try:
-				if os.path.isdir(directory):
-					self.openThread(directory)
-				else:
-					showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
-					
-				# self.txt.delete(1.0, END)	
-				# for i in range(len(listMD5)):
-					# self.txt.insert(END, listMD5[i])
-					# self.txt.insert(END, '\n')
-				
+				self.openThread(directory)
 			except FileNotFoundError as e:
 				logs.logWrite(f"FileNotFoundError {e}")
-		
-				
+		else:
+			showinfo(title="Info", message=f"Системе не удается найти указанный путь: '{directory}'")
+	
+	
 	def openThread(self, directory):
 		_thread.start_new_thread(self.setFields, (directory,))
 	
@@ -430,35 +439,33 @@ class AppLayout:
 				
 				path = os.path.join(dirname, name)
 				
-				if os.path.isfile(path):	#														Если это Файл ?
-					# print(f"path: {path}")
-					# txtQuit('q')
-					
+				if os.path.isfile(path):	#														Если это Файл ?			
 
 					basename, extension = os.path.splitext(path)
-					# print(f"extension: {extension}")
-					# txtQuit('q')
 					
-					if extension in except_extension:
-						# print(f"Расширение {extension} в списке игнорируемых.") 
+					if len(extension) == 0:
+						logs.logWrite(f"У файла отсутствует расширение. Путь к файлу: {path}")
+						continue
+					
+					if extUpper(extension) in except_extension:
+						logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
 						continue
 						
 					file_size = os.path.getsize(path)
-					# print(f"Curent dir: {dirname} {len(xList)}")
-					if not file_size > 0:	#														... и Файл больше ноля
-						# print(f"Размер файла {path}: {file_size} байт", type(file_size))
+
+					if not file_size > 0:	#														... и Файл не больше ноля
+						logs.logWrite(f"Размер файла {path}: не больше {file_size} байт. Тип переменной: {type(file_size)}")
 						continue
 
-					# if len(inputExtension) > 0:
-						# if inputExtension.upper() != extension.upper():
-							# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", extension.upper())
+					# if len(selected_extension) > 0:
+						# if selected_extension.upper() != extension.upper():
+							# print("Расширения не совпадают", "selected_extension =", selected_extension.upper(), "и extension =", extension.upper())
 							# continue
-					inputExtension = self.selectedExtension(self)
+					selected_extension = self.selectedExtension(self)
 					
-					if inputExtension != 'ALL FILE EXTENSIONS':
-						
-						if inputExtension.upper() != extension.upper():
-							# print("Расширения не совпадают", "inputExtension =", inputExtension.upper(), "и extension =", basename + extension.upper())
+					if selected_extension != 'ALL FILES':					
+						if extUpper(selected_extension) != extUpper(extension):
+							logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
 							continue
 					
 					try:
@@ -480,9 +487,9 @@ class AppLayout:
 								for iLisx in self.xListPath:
 									for i in iLisx:
 										if Code_SHA1 in i:
-											str = f"Найдена копия {iLisx[1]} в: {path}"
+											str = f"Найдена копия файла: {iLisx[1]} в: {path}"
 											self.txt.insert(END, str + '\n')
-											# print(str)
+											logs.logWrite(str)
 								
 								try:
 									index = xList.index(Code_SHA1)
@@ -516,7 +523,7 @@ class AppLayout:
 								
 								self.xListPath.append([Code_SHA1, path])
 								
-								print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
+								# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
 								
 					except subprocess.CalledProcessError as e:
 						# print(f"Command failed with error: {e}")
@@ -525,7 +532,7 @@ class AppLayout:
 						logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
 					
 				else:
-					if self.include_nested_directories.get() != 0:
+					if self.include_nested_dir.get() != 0:
 						if os.path.isdir(path):
 							self.walk(path)
 					
@@ -559,12 +566,12 @@ class AppLayout:
 		self.btn_save.configure(state=state)
 		self.btn_cdir.configure(state=state)
 		self.btn_checksum.configure(state=state)
-		self.btn_open.configure(state=state)
+		self.btn_logs.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
 
 		self.lbl_display.configure(state=state)
-		self.include_nested_dir.configure(state=state)
+		self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
 
 
@@ -576,12 +583,12 @@ class AppLayout:
 		self.btn_save.configure(state=state)
 		self.btn_cdir.configure(state=state)
 		self.btn_checksum.configure(state=state)
-		self.btn_open.configure(state=state)
+		self.btn_logs.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
 
 		self.lbl_display.configure(state=state)
-		self.include_nested_dir.configure(state=state)
+		self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
 
 
@@ -624,7 +631,7 @@ def main():
 
 
 if __name__=='__main__':
-	logs.logWrite("{} [{}]".format(os.getpid(), type(os.getpid())))
+	logs.logWrite("Получаем ИД процесса: {} [{}]".format(os.getpid(), type(os.getpid())))
 	main()
 
 
@@ -649,3 +656,26 @@ if __name__=='__main__':
     # sw: положение в нижнем левом углу
 
     # center: положение центру
+	
+	
+	
+	
+# from tkinter import *
+# from tkinter import ttk
+ 
+# root = Tk()
+# root.title("METANIT.COM")
+# root.geometry("250x200") 
+ 
+ 
+# def on_modified(event):
+    # label["text"]=editor.selection_get()
+ 
+# editor = Text(height=8)
+# editor.pack(fill=X)
+# editor.bind("<<Selection>>", on_modified)
+ 
+# label = ttk.Label()
+# label.pack(anchor=NW)
+ 
+# root.mainloop()
