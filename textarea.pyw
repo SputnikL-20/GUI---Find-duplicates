@@ -53,6 +53,7 @@ class AppLayout:
 		self.master = master
 		self.choose_file = os.getcwd()
 		self.choose_directory = os.getcwd()
+		self.message = StringVar()
 		
 		
 		# extensionFrame = LabelFrame(master, text='SELECTED EXTENSION', bg='gray')
@@ -89,25 +90,32 @@ class AppLayout:
 		
 		frame_settings.pack(anchor=SW, fill=X)
 		l_frame_settings.pack(fill=X)
+		
+		
+		l_frame_entry = LabelFrame(master, text='ENTRY', bg='gray')
+		frame_entry = Frame(l_frame_entry, bd=5, bg='white')
+		
+		self.entry  = Entry(frame_entry, width=700) # , text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1
+		self.entry.pack(side=LEFT, fill=X)
+		l_frame_entry.pack(anchor=CENTER, fill=X)
+		frame_entry.pack(anchor=CENTER, fill=X)
 
 
 		l_frame_navigator = LabelFrame(master, text='NAVIGATOR', bg='gray')
 
-		frame_lbl_display    = Frame(l_frame_navigator, bd=5, bg='orange')
+		frame_lbl_display = Frame(l_frame_navigator, bd=5, bg='orange')
 		self.lbl_display  = Label(frame_lbl_display, text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1)
 		self.lbl_display.pack(side=LEFT, fill=X)
+		
 		
 		# frame_lbl_display_test    = Frame(l_frame_navigator, bd=5, bg='orange')
 		# self.lbl_display_test  = Label(frame_lbl_display_test, text='TEST', fg='white', bg='gray', justify=LEFT)
 		# self.lbl_display_test.pack(side=LEFT, fill=X)
-		
-		
-
-		
-		
 		frame_lbl_display.pack(anchor=CENTER, fill=X) # pack(side=LEFT, anchor=W) 
 		# frame_lbl_display_test.pack(anchor=CENTER, fill=X) 
-
+		
+		
+		
 		frame_btn_command    = Frame(l_frame_navigator, bd=5, bg='red')
 		
 		self.btn_checksum = Button(frame_btn_command, text='CHECKSUM', width=20, command=self.checksumFile)
@@ -131,6 +139,7 @@ class AppLayout:
 		
 		frame_btn_command.pack(anchor=CENTER, fill=X) # E: положение в правой части контейнера по центру
 		l_frame_navigator.pack(fill=X)
+		
 		
 		l_frame_textarea     = LabelFrame(master, text='TXT AREA', bg='gray')
 		self.txt    = Text(l_frame_textarea, bg='#cdcdcd', fg='blue', wrap=NONE)
@@ -172,8 +181,14 @@ class AppLayout:
 		
 		
 	def on_modified(self, event):
+		
 		try:
-			self.lbl_display["text"] = self.txt.selection_get()
+			self.message = self.txt.selection_get()
+			# self.lbl_display["text"] = str
+			# if int(len(str)) < 160:
+			# self.entry.insert(0, self.message)
+			# else:
+				# self.entry.delete(0, END)
 		except Exception as e:
 			print(f"Ошибка {e}")
 
@@ -495,6 +510,16 @@ class AppLayout:
 		# print(len(xList))
 		
 		for name in os.listdir(dirname):
+		
+		
+			if extUpper(name) in except_extension:
+				s = name
+				if s[0] == '.':
+					print(s[0])
+					logs.logWrite(f"Защищенные точкой папки {name}.") 
+					continue
+				logs.logWrite(f"Дирректория {name} в списке игнорируемых.") 
+				continue
 
 			try:
 				
@@ -509,7 +534,7 @@ class AppLayout:
 						continue
 					
 					if extUpper(extension) in except_extension:
-						# logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
+						logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
 						continue
 						
 					file_size = os.path.getsize(path)
