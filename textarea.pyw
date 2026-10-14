@@ -20,7 +20,7 @@ finalCatalog 	= ''
 selected_extension 	= '.pdf'	# defaultextension
 # availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
 except_extension = [] # ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
-listMD5 		= []
+listMD5 		 = []
 
 
 
@@ -39,9 +39,6 @@ def txtDebug(val = ''):
 	
 def extUpper(extension):
 	return extension.upper()
-	
-# def extUpper(extension):
-	# return extension.upper()
 
 
 
@@ -54,11 +51,7 @@ class AppLayout:
 	def __init__(self, master):
 		
 		self.master = master
-		
-		
-		# if os.getcwd() != self.lbl_display['text'] and len(self.lbl_display['text']) != 0:
 		self.choose_file = os.getcwd()
-		# else:
 		self.choose_directory = os.getcwd()
 		
 		
@@ -70,9 +63,15 @@ class AppLayout:
 		
 		self.combo_extension_val = ('.PNG', '.JPG', '.PDF', '.XLSX', '.XLS', '.DOC', '.DOCX', '.MP3','.EPF', '.ERF', '.AVI', 'ALL FILES')	
 		self.combo_extension = ttk.Combobox(frame_settings, width=15, values=self.combo_extension_val, state=NORMAL)
-		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
 		self.combo_extension.current(0)
 		self.combo_extension.pack(side=LEFT)
+		self.combo_extension.bind("<<ComboboxSelected>>", self.selectedExtension)
+		
+		self.combo_hash_val = ('GOST', 'R', '34.11-94', 'MD2', 'MD4', 'MD5', 'SHA1', 'SHA256', 'SHA384', 'SHA512')	
+		self.combo_hash = ttk.Combobox(frame_settings, width=15, values=self.combo_hash_val, state=NORMAL)
+		self.combo_hash.current(6)
+		self.combo_hash.pack(side=LEFT)
+		self.combo_hash.bind("<<ComboboxSelected>>", self.selectedHash)
 			
 		self.debug_mode = IntVar()
 		self.debug_mode.set(1)
@@ -111,7 +110,7 @@ class AppLayout:
 
 		frame_btn_command    = Frame(l_frame_navigator, bd=5, bg='red')
 		
-		self.btn_checksum = Button(frame_btn_command, text='SHA-512 CHECKSUM', width=20, command=self.checksumFile)
+		self.btn_checksum = Button(frame_btn_command, text='CHECKSUM', width=20, command=self.checksumFile)
 		self.btn_checksum.pack(side=LEFT, anchor=W)
 		
 		self.btn_logs = Button(frame_btn_command, text="View Log'S", width=11, command=self.loadLogTxt)
@@ -175,8 +174,8 @@ class AppLayout:
 	def on_modified(self, event):
 		try:
 			self.lbl_display["text"] = self.txt.selection_get()
-		except:
-			print("Ошибка")
+		except Exception as e:
+			print(f"Ошибка {e}")
 
 	# extensionFrame.pack(fill=X)
 		
@@ -192,14 +191,17 @@ class AppLayout:
 	def setFields(self, path):
 		self.txt.delete(1.0, END)   # Очистка textarea
 		self.lock_ui()
-		print(f"Поиск в дирректории: {path}")
-		logs.logWrite(f"Поиск в дирректории: {path}")
+		str_start = f"Начало поиска в дирректории: {path}"
+		print(str_start)
+		logs.logWrite(str)
 		listMD5.clear()
 		self.xListPath = []
 		self.walk(path)
 		self.unlock_ui()
 		showinfo(title="", message="Спасибо! Поиск закончен.")
-		logs.logWrite(f"Поиск закончен...\n")
+		str_finish = f"Поиск завершен...\n"
+		print(str_finish)
+		logs.logWrite(str_finish)
 		# breakpoint()
 		# 	
 		# for i in range(len(listMD5)):
@@ -230,7 +232,7 @@ class AppLayout:
 		filename = os.path.join(self.choose_directory, 'ignore_extensions.dat') 
 		with open(filename, 'r', encoding='UTF-8') as f_hd:
 			# list_of_string = f_hd.read()	# <class 'str'>
-			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'>
+			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'> file.readlines([sizehint]); file - объект файла, sizehint - int, количество байтов
 		# print(list_of_val_with_line_breaks, type(list_of_val_with_line_breaks))
 		list_of_values = [value.rstrip('\n').upper() for value in list_of_val_with_line_breaks]
 		# print(list_of_values, type(list_of_values))		
@@ -243,17 +245,24 @@ class AppLayout:
 			showinfo(title="Info", message="Режим отладки включен")
 		else:
 			showinfo(title="Info", message="Режим отладки отключен")
-			
+	
+	
 	def getSettingNestedDir(self):
 		if not self.include_nested_dir.get() == 1:
 			# showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
 		# else:
 			showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
-		
+	
+	
 	def selectedExtension(self, event):
 		extension = self.combo_extension.get()
 		# print(extension, type(extension))
 		return extension
+		
+		
+	def selectedHash(self, event):
+		hash_algorithm = self.combo_hash.get()
+		return hash_algorithm
 
 
 	def checksumFile(self):
@@ -314,8 +323,9 @@ class AppLayout:
 					# if selected_extension.upper() != extension.upper():
 						# print("Расширения не совпадают", "selected_extension =", selected_extension.upper(), "и extension =", extension.upper())
 						# continue
+					hash_algorithm = self.selectedHash(self)
 					
-					checksum_file = self.getChecksum(path, 'SHA512')
+					checksum_file = self.getChecksum(path, hash_algorithm)
 					if checksum_file != 0:
 						self.txt.delete(1.0, END)
 						self.txt.insert(END, checksum_file + '\n')
@@ -356,22 +366,25 @@ class AppLayout:
 						# self.walk(path)		# print(f"Jamp {path}")
 						
 						
-	def getChecksum(self, path, check):
+	def getChecksum(self, path, algorithm): # Хэш-алгоритмы: GOST R 34.11-94 MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
 		
-		checksum_file = 0
+		checksum = 0
 				
-		try:		
+		try:
+			head, tail = os.path.split(path)
+			# unc_path = path.replace("/", "\\")
+			# print("head " + head, "tail " + tail)
+			unc_path = head.replace("/", "\\")
+			# print("unc_path " + unc_path)
 			result = subprocess.run(
-				['Certutil', '-hashfile', path, check],		# Command and arguments 
+				['Certutil', '-hashfile', os.path.join(unc_path, tail), algorithm],		# Command and arguments 'powershell.exe', 
 				capture_output=True,  						# Capture stdout and stderr
 				text=True,  								# Decode output as text
 				check=True  								# Raise CalledProcessError on non-zero exit code
 			)
 
 			if result.returncode == 0:
-				checksum_file = result.stdout.splitlines()[1]
-			if checksum_file != 0:
-				checksum = checksum_file
+				checksum = result.stdout.splitlines()[1]
 					
 		except subprocess.CalledProcessError as e:
 			print(f"Command failed with error: {e}")
@@ -383,27 +396,56 @@ class AppLayout:
 
 	def chooseFile(self):
 		self.choose_file = self.lbl_display['text']
-		filetypes = (("Любой", "*"), ("Изображение", "*.jpg *.gif *.png"), ("Текстовый файл", "*.txt"))
-		filename = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
-		# MD5 = []
-		if filename:
-			# self.ent_cdir.delete(0, END)
-			# self.ent_cdir.insert(0, filename)
-			self.lbl_display['text'] = filename
-			self.txt.delete(1.0, END)
-			with open(filename, 'r', encoding='UTF-8') as f_hd:
-				self.txt.insert(1.0, f_hd.read()) 
-				# список_строк = f_hd.readlines()
-				# MD5.append(f_hd.read())
-			# строки_без_переносов = [строка.rstrip('\n') for строка in список_строк]
+		filetypes = (("Любой", "*"), ("Внешняя обработка (1С)", "*.epf"), ("Внешний отчет (1С)", "*.erf"), ("Изображение", "*.jpg *.png *.gif"), ("Текстовый файл", "*.txt"))
+		filepath = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
 		
-			# print(строки_без_переносов, type(строки_без_переносов))
+		if os.path.isfile(filepath):
+			result = self.is_text_file(filepath) # , encoding='UTF-8'
+			if result:
+				self.importToTxt(filepath) # , 'Windows-1251'
+			else:
+				self.lbl_display['text'] = filepath
+			# try:
+				# self.ent_cdir.delete(0, END)
+				# self.ent_cdir.insert(0, filename)
+				
+				# self.txt.delete(1.0, END)
+				# with open(filename, 'r', encoding='UTF-8') as f_hd:
+					# self.txt.insert(1.0, f_hd.read()) 
+					# список_строк = f_hd.readlines()
+					# MD5.append(f_hd.read())
+				# строки_без_переносов = [строка.rstrip('\n') for строка in список_строк]
 			
-			# self.txt.insert(1.0, f_hd.read())
-			# f_hd = open(filename, encoding='utf-8') # encoding='utf-8'
-			# self.txt.insert(1.0, f_hd.read())
-			# f_hd.close()
-
+				# print(строки_без_переносов, type(строки_без_переносов))
+				
+				# self.txt.insert(1.0, f_hd.read())
+				# f_hd = open(filename, encoding='utf-8') # encoding='utf-8'
+				# self.txt.insert(1.0, f_hd.read())
+				# f_hd.close()
+			# except UnicodeDecodeError as e:
+				# str = f"invalid start byte {e}"
+				# logs.logWrite({e})
+			# except UnicodeDecodeError as e:
+				# str = f"Это бинарный файл {e}"
+				# logs.logWrite({e})
+	
+	
+	def is_text_file(self, filepath, encoding='UTF-8'):
+		try:
+			with open(filepath, 'r', encoding=encoding) as f: # fp = open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+				f.read(1024)  # Пытаемся прочитать часть файла # file.read([size]); file - объект файла; size - int, количество байтов
+			return True
+		except (UnicodeDecodeError, OSError):
+			return False
+	
+	
+	def importToTxt(self, filepath, encoding='UTF-8'):
+		self.lbl_display['text'] = filepath
+		self.txt.delete(1.0, END)
+		with open(filepath, 'r', encoding=encoding) as f_hd:
+			self.txt.insert(1.0, f_hd.read())
+	
+	
 	def saveFile(self):
 		contents = self.txt.get(1.0, END)	
 		saved_file = self.lbl_display['text']
@@ -467,7 +509,7 @@ class AppLayout:
 						continue
 					
 					if extUpper(extension) in except_extension:
-						logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
+						# logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
 						continue
 						
 					file_size = os.path.getsize(path)
@@ -484,7 +526,7 @@ class AppLayout:
 					
 					if selected_extension != 'ALL FILES':					
 						if extUpper(selected_extension) != extUpper(extension):
-							logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
+							# logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
 							continue
 					
 					try:
@@ -496,8 +538,11 @@ class AppLayout:
 							# check=True  								# Raise CalledProcessError on non-zero exit code
 						# )
 						
+						hash_algorithm = self.selectedHash(self)
 						
-						Code_Checksum = self.getChecksum(path, 'SHA512')
+						checksum = self.getChecksum(path, hash_algorithm)
+						if checksum == 0:
+							continue
 						# if checksum_file != 0:
 							# self.txt.delete(1.0, END)
 							# self.txt.insert(END, checksum_file + '\n')
@@ -505,20 +550,20 @@ class AppLayout:
 						# result = subprocess.run(['Certutil', '-hashfile', path, 'MD5'], capture_output=True, text=True, check=True)
 						# print(list(result.returncode))
 						# if result.returncode == 0:
-						# Code_Checksum = result.stdout.splitlines()[1]
+						# checksum = result.stdout.splitlines()[1]
 						
-						if Code_Checksum in xList:
+						if checksum in xList:
 							
 							for iLisx in self.xListPath:
 								for i in iLisx:
-									if Code_Checksum in i:
+									if checksum in i:
 										str = f"Найдена копия файла: {iLisx[1]} в: {path}"
 										self.txt.insert(END, str + '\n')
 										logs.logWrite(str)
 							
 							try:
-								index = xList.index(Code_Checksum)
-								print("xList count", len(xList), f"Index [{index}]", f"find {Code_Checksum}", path)
+								index = xList.index(checksum)
+								print("xList count", len(xList), f"Index [{index}]", f"find {checksum}", path)
 								# print()
 								# print(f"DebugMode {DebugMode}", DebugMode)
 								
@@ -542,11 +587,9 @@ class AppLayout:
 							# self.lbl_display_test['text'] = result.stdout.splitlines()[1]
 							# self.openThread(result.stdout.splitlines()[1])
 							
-							xList.append(Code_Checksum)
+							xList.append(checksum)
 							
-							# xListPath = [Code_Checksum, path]
-							
-							self.xListPath.append([Code_Checksum, path])
+							self.xListPath.append([checksum, path])
 							
 							# print(f"Количество в self.xListPath: {len(self.xListPath)}", f"Количество в xList: {len(xList)}")
 								
@@ -570,18 +613,6 @@ class AppLayout:
 	
 	def dismissApp(self):			
 		self.master.quit()
-		
-	# def set_widgets_state(self, parent, state="disabled"):
-		# for child in parent.winfo_children():
-			# Рекурсивно проверяем вложенные фреймы
-			# if child.winfo_children():
-				# set_widgets_state(child, state)
-			# try:
-				# child.configure(state=state)
-			# except:
-				# Некоторые виджеты (например, Frame или Label) не имеют состояния state
-				# print("DANDGER!")
-				# pass
 				
 	# Функция блокировки всего интерфейса
 	def lock_ui(self):
@@ -594,11 +625,11 @@ class AppLayout:
 		self.btn_logs.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
+		self.combo_hash.configure(state=state)
 
 		self.lbl_display.configure(state=state)
 		self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
-
 
 	# Функция разблокировки
 	def unlock_ui(self):
@@ -611,26 +642,11 @@ class AppLayout:
 		self.btn_logs.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
+		self.combo_hash.configure(state=state)
 
 		self.lbl_display.configure(state=state)
 		self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
-
-
-# root = Tk()
-
-# Установка отображения формы в центре экрана
-# x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 3
-# y = (root.winfo_screenheight() - root.winfo_reqheight()) / 3.5
-
-# root.wm_geometry("+%d+%d" % (x, y))
-
-# obj = AppLayout(root)
-
-
-
-# root.mainloop() 
-
 
 
 def main():
@@ -683,7 +699,26 @@ if __name__=='__main__':
     # center: положение центру
 	
 	
-	
+
+
+
+# root = Tk()
+
+# Установка отображения формы в центре экрана
+# x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 3
+# y = (root.winfo_screenheight() - root.winfo_reqheight()) / 3.5
+
+# root.wm_geometry("+%d+%d" % (x, y))
+
+# obj = AppLayout(root)
+
+
+
+# root.mainloop() 
+
+
+
+
 	
 # from tkinter import *
 # from tkinter import ttk
@@ -704,3 +739,18 @@ if __name__=='__main__':
 # label.pack(anchor=NW)
  
 # root.mainloop()
+
+
+
+
+	# def set_widgets_state(self, parent, state="disabled"):
+		# for child in parent.winfo_children():
+			# Рекурсивно проверяем вложенные фреймы
+			# if child.winfo_children():
+				# set_widgets_state(child, state)
+			# try:
+				# child.configure(state=state)
+			# except:
+				# Некоторые виджеты (например, Frame или Label) не имеют состояния state
+				# print("DANDGER!")
+				# pass
