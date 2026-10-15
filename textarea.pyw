@@ -92,13 +92,13 @@ class AppLayout:
 		l_frame_settings.pack(fill=X)
 		
 		
-		l_frame_entry = LabelFrame(master, text='ENTRY', bg='gray')
-		frame_entry = Frame(l_frame_entry, bd=5, bg='white')
+		# l_frame_entry = LabelFrame(master, text='ENTRY', bg='gray')
+		# frame_entry = Frame(l_frame_entry, bd=5, bg='white')
 		
-		self.entry  = Entry(frame_entry, width=700) # , text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1
-		self.entry.pack(side=LEFT, fill=X)
-		l_frame_entry.pack(anchor=CENTER, fill=X)
-		frame_entry.pack(anchor=CENTER, fill=X)
+		# self.entry  = Entry(frame_entry, width=700) # , text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1
+		# self.entry.pack(side=LEFT, fill=X)
+		# l_frame_entry.pack(anchor=CENTER, fill=X)
+		# frame_entry.pack(anchor=CENTER, fill=X)
 
 
 		l_frame_navigator = LabelFrame(master, text='NAVIGATOR', bg='gray')
@@ -184,7 +184,7 @@ class AppLayout:
 		
 		try:
 			self.message = self.txt.selection_get()
-			# self.lbl_display["text"] = str
+			self.lbl_display["text"] = self.message
 			# if int(len(str)) < 160:
 			# self.entry.insert(0, self.message)
 			# else:
@@ -501,6 +501,48 @@ class AppLayout:
 	def openThread(self, directory):
 		_thread.start_new_thread(self.setFields, (directory,))
 	
+	def validateDir(self, name):
+		# print("name До: ", name)
+		
+		if extUpper(name) in except_extension:
+			logs.logWrite(f"Дирректория {name} в списке игнорируемых.") 
+			return False
+		
+		s = name
+		if s[0] == '.':
+			# print("s[0] = ", s[0])
+			logs.logWrite(f"Защищенные точкой папки {name}.") 
+			return False
+		
+		# print("name После: ", name)
+		
+		return True
+		
+
+	def validateExt(self, ext):
+		# print("ext До: ", ext)
+			
+		extension = ext
+		
+		if len(extension) == 0:
+			logs.logWrite(f"У файла отсутствует расширение... Количество символов расширения: {len(extension)}")
+			return False
+						
+		if extUpper(extension) in except_extension:
+			logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
+			return False
+			
+		selected_extension = self.selectedExtension(self)
+		
+		if selected_extension != 'ALL FILES':
+			if extUpper(extension) != extUpper(selected_extension):
+				logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
+				return False
+		
+		# print("ext После: ", ext)
+		
+		return True
+	
 	
 	def walk(self, dirname):
 		
@@ -511,48 +553,25 @@ class AppLayout:
 		
 		for name in os.listdir(dirname):
 		
-		
-			if extUpper(name) in except_extension:
-				s = name
-				if s[0] == '.':
-					print(s[0])
-					logs.logWrite(f"Защищенные точкой папки {name}.") 
-					continue
-				logs.logWrite(f"Дирректория {name} в списке игнорируемых.") 
+			if not self.validateDir(name):
 				continue
 
 			try:
 				
 				path = os.path.join(dirname, name)
 				
-				if os.path.isfile(path):	#														Если это Файл ?			
-
-					basename, extension = os.path.splitext(path)
+				if os.path.isfile(path):	#															Если это Файл ?
 					
-					if len(extension) == 0:
-						logs.logWrite(f"У файла отсутствует расширение. Путь к файлу: {path}")
-						continue
-					
-					if extUpper(extension) in except_extension:
-						logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
-						continue
-						
 					file_size = os.path.getsize(path)
 
-					if not file_size > 0:	#														... и Файл не больше ноля
+					if not file_size > 0:	#															... и Файл не больше ноля
 						logs.logWrite(f"Размер файла {path}: не больше {file_size} байт. Тип переменной: {type(file_size)}")
 						continue
 
-					# if len(selected_extension) > 0:
-						# if selected_extension.upper() != extension.upper():
-							# print("Расширения не совпадают", "selected_extension =", selected_extension.upper(), "и extension =", extension.upper())
-							# continue
-					selected_extension = self.selectedExtension(self)
+					basename, extension = os.path.splitext(path)
 					
-					if selected_extension != 'ALL FILES':					
-						if extUpper(selected_extension) != extUpper(extension):
-							# logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
-							continue
+					if not self.validateExt(extension):
+						continue
 					
 					try:
 						
@@ -567,6 +586,7 @@ class AppLayout:
 						
 						checksum = self.getChecksum(path, hash_algorithm)
 						if checksum == 0:
+							logs.logWrite(f"Не удалось вычислить хэш-сумму. Файл: {path}. Алгоритм: {hash_algorithm}")
 							continue
 						# if checksum_file != 0:
 							# self.txt.delete(1.0, END)
