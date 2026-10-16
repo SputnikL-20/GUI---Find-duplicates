@@ -16,11 +16,11 @@ import _thread
 	
 
 DebugMode		= True
-finalCatalog 	= ''
+# finalCatalog 	= ''
 selected_extension 	= '.pdf'	# defaultextension
 # availableExtensions = ['.jpg', '.png', '.cfe', '.cfu', '.epf']
-except_extension = [] # ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
-listMD5 		 = []
+# EXCEPT_EXTENSION = [] # ['.cfl', '.7z', '.lnk', '.avif', '.dthumb', '.INI', '.HTML']
+listHASHES 		 = []
 
 
 
@@ -54,6 +54,7 @@ class AppLayout:
 		self.choose_file = os.getcwd()
 		self.choose_directory = os.getcwd()
 		self.message = StringVar()
+		self.EXCEPT_EXTENSION = []
 		
 		
 		# extensionFrame = LabelFrame(master, text='SELECTED EXTENSION', bg='gray')
@@ -121,8 +122,11 @@ class AppLayout:
 		self.btn_checksum = Button(frame_btn_command, text='CHECKSUM', width=20, command=self.checksumFile)
 		self.btn_checksum.pack(side=LEFT, anchor=W)
 		
-		self.btn_logs = Button(frame_btn_command, text="View Log'S", width=11, command=self.loadLogTxt)
+		self.btn_logs = Button(frame_btn_command, text="View Log'S", width=11, command=self.viewHistory)
 		self.btn_logs.pack(side=LEFT, anchor=W)
+		
+		self.btn_ig_exc = Button(frame_btn_command, text="Ignor Exc", width=11, command=self.viewIgnorExc)
+		self.btn_ig_exc.pack(side=LEFT, anchor=W)
 		
 		self.btn_cdir = Button(frame_btn_command, text='OPEN DIR',  width=11, command=self.chooseDirectory)
 		self.btn_cdir.pack(side=RIGHT, anchor=E)
@@ -204,22 +208,27 @@ class AppLayout:
 	
 	
 	def setFields(self, path):
-		self.txt.delete(1.0, END)   # Очистка textarea
-		self.lock_ui()
-		str_start = f"Начало поиска в дирректории: {path}"
-		print(str_start)
-		logs.logWrite(str)
-		listMD5.clear()
-		self.xListPath = []
-		self.walk(path)
-		self.unlock_ui()
-		showinfo(title="", message="Спасибо! Поиск закончен.")
-		str_finish = f"Поиск завершен...\n"
-		print(str_finish)
-		logs.logWrite(str_finish)
+		try:
+			self.txt.delete(1.0, END)   # Очистка textarea
+			
+			str_start = f"Начало поиска в дирректории: {path}"
+			# print(str_start)
+			logs.logWrite(str_start)
+			listHASHES.clear()
+			self.xListPath = []
+			self.getIgnorExtensions()
+			self.lock_ui()
+			self.walk(path)
+			self.unlock_ui()
+			showinfo(title="", message="Спасибо! Поиск завершен...")
+			str_finish = f"Поиск завершен...\n"
+			# print(str_finish)
+			logs.logWrite(str_finish)
+		except Exception as e:
+			logs.logWrite(f"Ошибка в процессе поика дублей: {e}")
 		# breakpoint()
 		# 	
-		# for i in range(len(listMD5)):
+		# for i in range(len(listHASHES)):
 		# self.lbl_display_test['text'] = path
 		# 
 		# self.txt.insert(END, '\n')
@@ -231,28 +240,34 @@ class AppLayout:
 		# self.cash_model.current(path['model'])
 	
 	
-	def loadLogTxt(self):	
+	def viewHistory(self):
 		filename = os.path.join(os.getcwd(), 'file-log.log')
-		if os.path.isfile(filename):
+		self.importToTxt(filename)
+		# if os.path.isfile(filename):
 			# Очищаем поле текстового документа
-			self.txt.delete(1.0, END)
+			# self.txt.delete(1.0, END)
 			# читаем построчно с помощью `for`
-			with open(filename, 'r', encoding='UTF-8') as f_hd:
-				for line in f_hd:
+			# with open(filename, 'r', encoding='UTF-8') as f_hd:
+				# for line in f_hd:
 					# Вставляем строку в конец списка
-					self.txt.insert(END, line)
+					# self.txt.insert(END, line)
+	
+	
+	def viewIgnorExc(self):
+		filename = os.path.join(os.getcwd(), 'ignore_extensions.dat')
+		self.importToTxt(filename)
 	
 	
 	def getIgnorExtensions(self):
-		filename = os.path.join(self.choose_directory, 'ignore_extensions.dat') 
+		filename = os.path.join(os.getcwd(), 'ignore_extensions.dat') 
 		with open(filename, 'r', encoding='UTF-8') as f_hd:
 			# list_of_string = f_hd.read()	# <class 'str'>
 			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'> file.readlines([sizehint]); file - объект файла, sizehint - int, количество байтов
 		# print(list_of_val_with_line_breaks, type(list_of_val_with_line_breaks))
-		list_of_values = [value.rstrip('\n').upper() for value in list_of_val_with_line_breaks]
+		self.EXCEPT_EXTENSION = [value.rstrip('\n').upper() for value in list_of_val_with_line_breaks]
 		# print(list_of_values, type(list_of_values))		
-		except_extension.extend(list_of_values)
-		logs.logWrite(f"Список игнорируемых расширений: {except_extension}")
+		# EXCEPT_EXTENSION.extend(list_of_values)
+		logs.logWrite(f"Список игнорируемых расширений: {self.EXCEPT_EXTENSION}")
 	
 	
 	def selectDebug(self):
@@ -317,7 +332,7 @@ class AppLayout:
 				# print(f"extension: {extension} basename: {basename}")
 				# txtQuit('q')
 				
-				# if extension in except_extension:
+				# if extension in EXCEPT_EXTENSION:
 					# print(f"Расширение {extension} в списке игнорируемых.") 
 					# continue
 					
@@ -411,14 +426,14 @@ class AppLayout:
 
 	def chooseFile(self):
 		self.choose_file = self.lbl_display['text']
-		filetypes = (("Любой", "*"), ("Внешняя обработка (1С)", "*.epf"), ("Внешний отчет (1С)", "*.erf"), ("Изображение", "*.jpg *.png *.gif"), ("Текстовый файл", "*.txt"))
-		filepath = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
 		
-		if os.path.isfile(filepath):
-			result = self.is_text_file(filepath) # , encoding='UTF-8'
+		if os.path.isfile(self.choose_file):
+			result = self.is_text_file(self.choose_file)
 			if result:
-				self.importToTxt(filepath) # , 'Windows-1251'
+				self.importToTxt(self.choose_file)
 			else:
+				filetypes = (("Любой", "*"), ("Внешняя обработка (1С)", "*.epf"), ("Внешний отчет (1С)", "*.erf"), ("Изображение", "*.jpg *.png *.gif"), ("Текстовый файл", "*.txt"))
+				filepath = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
 				self.lbl_display['text'] = filepath
 			# try:
 				# self.ent_cdir.delete(0, END)
@@ -469,7 +484,18 @@ class AppLayout:
 			with open(saved_file, 'w', encoding='UTF-8') as f_hd:
 				f_hd.write(contents)
 		else:
-			new_file = fd.asksaveasfile(title="Сохранить файл", defaultextension=".txt", filetypes=(("Текстовый файл", "*.txt"), ("Тестовый файл", "*.dat")))			
+			if os.path.isdir(self.lbl_display['text']):
+				dir = self.lbl_display['text']
+				
+				new_file = fd.asksaveasfile(
+					title="Сохранить файл", 
+					defaultextension=".txt", 
+					filetypes=(
+						("Textfile (TXT)", "*.txt"), 
+						("Формат DAT (файлы Data)", "*.dat"), 
+						("Файлы CSV (Comma-separated values или character-separated values - разделенные запятыми/символами значения)", "*.csv") # https://www.online-convert.com/ru/file-type
+					), 
+					initialfile=os.path.join(dir, "default"))			
 			if new_file:
 				new_file.write(contents)
 				new_file.close()
@@ -501,17 +527,18 @@ class AppLayout:
 	def openThread(self, directory):
 		_thread.start_new_thread(self.setFields, (directory,))
 	
-	def validateDir(self, name):
+	
+	def validateDir(self, name, dir):
 		# print("name До: ", name)
 		
-		if extUpper(name) in except_extension:
-			logs.logWrite(f"Дирректория {name} в списке игнорируемых.") 
+		if extUpper(name) in self.EXCEPT_EXTENSION:
+			logs.logWrite(f"Дирректория {name} в списке игнорируемых. Путь к папке: {dir}")
 			return False
 		
 		s = name
 		if s[0] == '.':
 			# print("s[0] = ", s[0])
-			logs.logWrite(f"Защищенные точкой папки {name}.") 
+			logs.logWrite(f"Защищенные точкой папки {name}. Путь к папке: {dir}")
 			return False
 		
 		# print("name После: ", name)
@@ -519,24 +546,30 @@ class AppLayout:
 		return True
 		
 
-	def validateExt(self, ext):
+	def validateExt(self, ext, file):
 		# print("ext До: ", ext)
 			
 		extension = ext
+		path 	  = file
+		file_size = os.path.getsize(path) # Возвращает значение. Тип переменной: <class 'int'>
+
+		if not file_size > 0:	#															... и Файл не больше ноля
+			logs.logWrite("Размер файла " + "{" + path + "}" + f": не больше {file_size} байт. Пустые файлы не хешируются...")
+			return False
 		
 		if len(extension) == 0:
-			logs.logWrite(f"У файла отсутствует расширение... Количество символов расширения: {len(extension)}")
+			logs.logWrite(f"У файла {file} отсутствует расширение... Количество символов расширения: {len(extension)}")
 			return False
 						
-		if extUpper(extension) in except_extension:
-			logs.logWrite(f"Расширение {extension} в списке игнорируемых.") 
+		if extUpper(extension) in self.EXCEPT_EXTENSION:
+			logs.logWrite(f"Расширение {extension} в списке игнорируемых. Путь к файлу: {file}")
 			return False
 			
 		selected_extension = self.selectedExtension(self)
 		
 		if selected_extension != 'ALL FILES':
 			if extUpper(extension) != extUpper(selected_extension):
-				logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension}")
+				logs.logWrite(f"Выбранное расширение для поиска файлов: {selected_extension}: не соответствует текущему: {extension} - Путь к файлу: {file}")
 				return False
 		
 		# print("ext После: ", ext)
@@ -547,13 +580,13 @@ class AppLayout:
 	def walk(self, dirname):
 		
 		DebugMode = True
-		xList = listMD5
+		xList = listHASHES
 		# xListPath = []
 		# print(len(xList))
 		
 		for name in os.listdir(dirname):
 		
-			if not self.validateDir(name):
+			if not self.validateDir(name, dirname):
 				continue
 
 			try:
@@ -562,15 +595,15 @@ class AppLayout:
 				
 				if os.path.isfile(path):	#															Если это Файл ?
 					
-					file_size = os.path.getsize(path)
+					# file_size = os.path.getsize(path)
 
-					if not file_size > 0:	#															... и Файл не больше ноля
-						logs.logWrite(f"Размер файла {path}: не больше {file_size} байт. Тип переменной: {type(file_size)}")
-						continue
+					# if not file_size > 0:	#															... и Файл не больше ноля
+						# logs.logWrite(f"Размер файла {path}: не больше {file_size} байт. Тип переменной: {type(file_size)}")
+						# continue
 
 					basename, extension = os.path.splitext(path)
 					
-					if not self.validateExt(extension):
+					if not self.validateExt(extension, path):
 						continue
 					
 					try:
@@ -711,13 +744,13 @@ def main():
 	root.protocol('WM_DELETE_WINDOW', obj.dismissApp)
 	
 	
-	obj.getIgnorExtensions()
+	# obj.getIgnorExtensions()
 	
 	root.mainloop()
 
 
 if __name__=='__main__':
-	logs.logWrite("Получаем ИД процесса: {} [{}]".format(os.getpid(), type(os.getpid())))
+	logs.logWrite("GUI - Find duplicates ИД процесса: {} [{}]".format(os.getpid(), type(os.getpid())))
 	main()
 
 
