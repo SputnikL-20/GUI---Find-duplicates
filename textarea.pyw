@@ -3,6 +3,8 @@
 from   tkinter import *
 from   tkinter import ttk
 from   tkinter.messagebox import showinfo
+from PIL import Image
+from idlelib.tooltip import Hovertip
 import tkinter.filedialog as fd
 import re
 
@@ -51,10 +53,23 @@ class AppLayout:
 	def __init__(self, master):
 		
 		self.master = master
+		self.root_dir = os.getcwd()
+		self.IMG_DIR = f"{os.getcwd()}\\res\img"
 		self.choose_file = os.getcwd()
 		self.choose_directory = os.getcwd()
 		self.message = StringVar()
 		self.EXCEPT_EXTENSION = []
+		self.img_str_copy = PhotoImage(file=os.path.join(self.IMG_DIR, 'СкопироватьВБуферОбмена\\125.png'))
+		self.img_log_view = PhotoImage(file=os.path.join(self.IMG_DIR, 'ПоказатьДанные\\tbeventlog_125.png'))
+		self.img_find_file = PhotoImage(file=os.path.join(self.IMG_DIR, 'Найти\\tbgledit_125_rtl.png'))
+		self.img_save_file = PhotoImage(file=os.path.join(self.IMG_DIR, 'СохранитьФайл\\tbglfile_125.png'))
+		self.img_open_file = PhotoImage(file=os.path.join(self.IMG_DIR, 'ОткрытьФайл\\tbglfile_125.png'))
+		self.img_open_dir = PhotoImage(file=os.path.join(self.IMG_DIR, 'Папки\\cropped_pillow_125.png'))
+		# self.img_tree_dir_on = PhotoImage(file='cropped_pillow_флажок.png')
+		self.img_tree_dir_on = PhotoImage(file=os.path.join(self.IMG_DIR, 'РежимПросмотраСпискаИерархическийСписок\\l.png'))
+		# self.img_tree_dir_off = PhotoImage(file='cropped_pillow_крестик.png')
+		self.img_tree_dir_off = PhotoImage(file=os.path.join(self.IMG_DIR, 'РежимПросмотраСпискаСписок\\l.png'))
+		self.img_list_except = PhotoImage(file=os.path.join(self.IMG_DIR, 'РежимПросмотраСпискаСписок\\tbglacti_125.png'))
 		
 		
 		# extensionFrame = LabelFrame(master, text='SELECTED EXTENSION', bg='gray')
@@ -84,9 +99,14 @@ class AppLayout:
 		
 		self.include_nested_dir = IntVar()
 		self.include_nested_dir.set(0)
-		self.include_nested_dir_checkbutton = ttk.Checkbutton(frame_settings, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_dir, command=self.getSettingNestedDir)
+		# self.include_nested_dir_checkbutton = ttk.Checkbutton(frame_settings, image=self.img_tree_dir_off, text="INCLUDE NESTED DIRECTORIES", variable=self.include_nested_dir, command=self.getSettingNestedDir)
 		position = {"padx":6, "pady":6, "anchor":E, "side":RIGHT}; 
-		self.include_nested_dir_checkbutton.pack(**position)
+		# self.include_nested_dir_checkbutton.pack(**position)
+		
+		# self.lbl_nested_dir  = Label(frame_settings, image=self.img_tree_dir_off, bg='blue', justify=RIGHT) # , fg='white', bg='gray', height=1  text='Включить вложенные папки',
+		# self.lbl_nested_dir.pack(**position)
+		# tip = Hovertip(self.lbl_nested_dir, ' Включить вложенные папки? ')
+		# self.lbl_nested_dir.bind('<Button-1>', self.on_click)
 		
 		
 		frame_settings.pack(anchor=SW, fill=X)
@@ -107,6 +127,12 @@ class AppLayout:
 		frame_lbl_display = Frame(l_frame_navigator, bd=5, bg='orange')
 		self.lbl_display  = Label(frame_lbl_display, text=self.choose_directory, fg='white', bg='gray', justify=LEFT, height=1)
 		self.lbl_display.pack(side=LEFT, fill=X)
+		self.lbl_display.bind('<Button-1>', self.on_click)
+		
+		self.lbl_nested_dir  = Label(frame_lbl_display, image=self.img_tree_dir_off, bg='orange', justify=RIGHT) # , fg='white', bg='gray', height=1  text='Включить вложенные папки',
+		self.lbl_nested_dir.pack(side=RIGHT)
+		tip = Hovertip(self.lbl_nested_dir, ' Вложенные папки отключены ')
+		
 		
 		
 		# frame_lbl_display_test    = Frame(l_frame_navigator, bd=5, bg='orange')
@@ -121,24 +147,35 @@ class AppLayout:
 		
 		self.btn_checksum = Button(frame_btn_command, text='CHECKSUM', width=20, command=self.checksumFile)
 		self.btn_checksum.pack(side=LEFT, anchor=W)
+		tip = Hovertip(self.btn_checksum, 'Вывести хэш-алгоритм')
 		
-		self.btn_logs = Button(frame_btn_command, text="View Log'S", width=11, command=self.viewHistory)
+		self.btn_logs = Button(frame_btn_command, image=self.img_log_view, text="View Log'S", width=20, command=self.viewHistory)
 		self.btn_logs.pack(side=LEFT, anchor=W)
+		tip = Hovertip(self.btn_logs, 'View tLog')
 		
-		self.btn_ig_exc = Button(frame_btn_command, text="Ignor Exc", width=11, command=self.viewIgnorExc)
+		self.btn_ig_exc = Button(frame_btn_command, image=self.img_list_except, text="Ignor Exc", width=20, command=self.viewIgnorExc)
 		self.btn_ig_exc.pack(side=LEFT, anchor=W)
+		tip = Hovertip(self.btn_ig_exc, 'Ignor extensions')
 		
-		self.btn_cdir = Button(frame_btn_command, text='OPEN DIR',  width=11, command=self.chooseDirectory)
+		self.btn_cdir = Button(frame_btn_command, image=self.img_open_dir, text='OPEN DIR',  width=20, command=self.chooseDirectory)
 		self.btn_cdir.pack(side=RIGHT, anchor=E)
+		tip = Hovertip(self.btn_cdir, 'OPEN DIR')
 		
-		self.btn_open = Button(frame_btn_command, text='OPEN FILE', width=11, command=self.chooseFile)
+		self.btn_open = Button(frame_btn_command, image=self.img_open_file, text='OPEN FILE', width=20, command=self.chooseFile)
 		self.btn_open.pack(side=RIGHT, anchor=E)
+		tip = Hovertip(self.btn_open, 'OPEN FILE')
 		
-		self.btn_save = Button(frame_btn_command, text='SAVE FILE', width=11, command=self.saveFile)
+		self.btn_save = Button(frame_btn_command, image=self.img_save_file, text='SAVE FILE', width=20, command=self.saveFile)
 		self.btn_save.pack(side=RIGHT, anchor=E)
+		tip = Hovertip(self.btn_save, 'SAVE FILE')
 		
-		self.btn_find = Button(frame_btn_command, text='FIND',  width=11, command=self.findDoubles)
+		self.btn_find = Button(frame_btn_command, image=self.img_find_file, text='FIND',  width=20, command=self.findDoubles)
 		self.btn_find.pack(side=RIGHT, anchor=E)
+		tip = Hovertip(self.btn_find, 'FIND')
+		
+		self.btn_Copy = Button(frame_btn_command, image=self.img_str_copy,  width=20, command=self.on_copy)
+		self.btn_Copy.pack(side=RIGHT, anchor=E)
+		tip = Hovertip(self.btn_Copy, 'Вывести в Label')
 
 		
 		frame_btn_command.pack(anchor=CENTER, fill=X) # E: положение в правой части контейнера по центру
@@ -181,14 +218,33 @@ class AppLayout:
 		self.xListPath = []
 		
 		
-
+	def on_click(self, event):
+		if self.include_nested_dir.get() == 0:
+			tip = Hovertip(self.lbl_nested_dir, ' Вложенные папки включены ')
+			# print(tip)
+			# self.include_nested_dir_checkbutton.configure(image=self.img_tree_dir_off)
+			self.lbl_nested_dir.configure(image=self.img_tree_dir_on)
+			self.include_nested_dir.set(1)
+			
+		elif self.include_nested_dir.get() == 1:
+			tip = Hovertip(self.lbl_nested_dir, ' Вложенные папки отключены ')
+			# print(tip)
+			# self.include_nested_dir_checkbutton.configure(image=self.img_tree_dir_on)
+			self.lbl_nested_dir.configure(image=self.img_tree_dir_off)
+			self.include_nested_dir.set(0)
+			
+		
+		# print('Метка нажата!')
+		
+	def on_copy(self):
+		self.lbl_display["text"] = self.message
 		
 		
 	def on_modified(self, event):
 		
 		try:
 			self.message = self.txt.selection_get()
-			self.lbl_display["text"] = self.message
+			# self.lbl_display["text"] = self.message
 			# if int(len(str)) < 160:
 			# self.entry.insert(0, self.message)
 			# else:
@@ -241,25 +297,23 @@ class AppLayout:
 	
 	
 	def viewHistory(self):
-		filename = os.path.join(os.getcwd(), 'file-log.log')
-		self.importToTxt(filename)
-		# if os.path.isfile(filename):
-			# Очищаем поле текстового документа
-			# self.txt.delete(1.0, END)
-			# читаем построчно с помощью `for`
-			# with open(filename, 'r', encoding='UTF-8') as f_hd:
-				# for line in f_hd:
-					# Вставляем строку в конец списка
-					# self.txt.insert(END, line)
+		try:
+			filename = os.path.join(os.getcwd(), 'res\\file-log.log')
+			self.importToTxt(filename)
+		except FileNotFoundError as e:
+			print(f"Файл не найден {e}")
 	
 	
 	def viewIgnorExc(self):
-		filename = os.path.join(os.getcwd(), 'ignore_extensions.dat')
-		self.importToTxt(filename)
+		try:
+			filename = os.path.join(os.getcwd(), 'res\\ignore_extensions.dat')
+			self.importToTxt(filename)
+		except FileNotFoundError as e:
+			print(f"Файл не найден {e}")
 	
 	
 	def getIgnorExtensions(self):
-		filename = os.path.join(os.getcwd(), 'ignore_extensions.dat') 
+		filename = os.path.join(os.getcwd(), 'res\\ignore_extensions.dat') 
 		with open(filename, 'r', encoding='UTF-8') as f_hd:
 			# list_of_string = f_hd.read()	# <class 'str'>
 			list_of_val_with_line_breaks = f_hd.readlines()	# <class 'list'> file.readlines([sizehint]); file - объект файла, sizehint - int, количество байтов
@@ -277,11 +331,13 @@ class AppLayout:
 			showinfo(title="Info", message="Режим отладки отключен")
 	
 	
-	def getSettingNestedDir(self):
-		if not self.include_nested_dir.get() == 1:
+	# def getSettingNestedDir(self):
+		# if not self.include_nested_dir.get() == 1:
+			# self.include_nested_dir_checkbutton.configure(image=self.img_tree_dir_off)
 			# showinfo(title="Info", message="Будет выполнен поиск во вложенных каталогах")
 		# else:
-			showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
+			# self.include_nested_dir_checkbutton.configure(image=self.img_tree_dir_on)
+			# showinfo(title="Info", message="Поиск во вложенных каталогах отключен")
 	
 	
 	def selectedExtension(self, event):
@@ -398,6 +454,10 @@ class AppLayout:
 						
 	def getChecksum(self, path, algorithm): # Хэш-алгоритмы: GOST R 34.11-94 MD2 MD4 MD5 SHA1 SHA256 SHA384 SHA512
 		
+		startupinfo = subprocess.STARTUPINFO()
+		startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+		startupinfo.wShowWindow = subprocess.SW_HIDE
+		
 		checksum = 0
 				
 		try:
@@ -405,19 +465,25 @@ class AppLayout:
 			# unc_path = path.replace("/", "\\")
 			# print("head " + head, "tail " + tail)
 			unc_path = head.replace("/", "\\")
-			# print("unc_path " + unc_path)
+			InFile = f'"{os.path.join(unc_path, tail)}"'
+			logs.logWrite(f"InFile: {InFile}")
+			
+			command = ['powershell.exe', 'Certutil', '-hashfile', InFile, algorithm]
 			result = subprocess.run(
-				['Certutil', '-hashfile', os.path.join(unc_path, tail), algorithm],		# Command and arguments 'powershell.exe', 
-				capture_output=True,  						# Capture stdout and stderr
-				text=True,  								# Decode output as text
-				check=True  								# Raise CalledProcessError on non-zero exit code
+				command,									# Command and arguments 'powershell.exe', 
+				capture_output=True,						# Capture stdout and stderr
+				text=True,									# Decode output as text
+				startupinfo=startupinfo						# Raise CalledProcessError on non-zero exit code
 			)
+			
+			# print(result.stdout)
+			logs.logWrite(f"result.stdout: {result.stdout}")
 
 			if result.returncode == 0:
 				checksum = result.stdout.splitlines()[1]
 					
 		except subprocess.CalledProcessError as e:
-			print(f"Command failed with error: {e}")
+			# print(f"Command failed with error: {e}")
 			logs.logWrite(f"Raise CalledProcessError on non-zero exit code: {e}")
 			
 		return checksum
@@ -431,10 +497,10 @@ class AppLayout:
 			result = self.is_text_file(self.choose_file)
 			if result:
 				self.importToTxt(self.choose_file)
-			else:
-				filetypes = (("Любой", "*"), ("Внешняя обработка (1С)", "*.epf"), ("Внешний отчет (1С)", "*.erf"), ("Изображение", "*.jpg *.png *.gif"), ("Текстовый файл", "*.txt"))
-				filepath = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
-				self.lbl_display['text'] = filepath
+		else:
+			filetypes = (("Любой", "*"), ("Внешняя обработка (1С)", "*.epf"), ("Внешний отчет (1С)", "*.erf"), ("Изображение", "*.jpg *.png *.gif"), ("Текстовый файл", "*.txt"))
+			filepath = fd.askopenfilename(title="Открыть файл", initialdir=self.choose_file, filetypes=filetypes)
+			self.lbl_display['text'] = filepath
 			# try:
 				# self.ent_cdir.delete(0, END)
 				# self.ent_cdir.insert(0, filename)
@@ -701,12 +767,13 @@ class AppLayout:
 		self.btn_cdir.configure(state=state)
 		self.btn_checksum.configure(state=state)
 		self.btn_logs.configure(state=state)
+		self.btn_ig_exc.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
 		self.combo_hash.configure(state=state)
 
 		self.lbl_display.configure(state=state)
-		self.include_nested_dir_checkbutton.configure(state=state)
+		# self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
 
 	# Функция разблокировки
@@ -718,12 +785,13 @@ class AppLayout:
 		self.btn_cdir.configure(state=state)
 		self.btn_checksum.configure(state=state)
 		self.btn_logs.configure(state=state)
+		self.btn_ig_exc.configure(state=state)
 		self.btn_find.configure(state=state)
 		self.combo_extension.configure(state=state)
 		self.combo_hash.configure(state=state)
 
 		self.lbl_display.configure(state=state)
-		self.include_nested_dir_checkbutton.configure(state=state)
+		# self.include_nested_dir_checkbutton.configure(state=state)
 		self.debug_mode_checkbutton.configure(state=state)
 
 

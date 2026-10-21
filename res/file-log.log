@@ -1,0 +1,1847 @@
+2026-10-21 17:14:06.263646 GUI - Find duplicates ИД процесса: 19056 [<class 'int'>]
+2026-10-21 17:14:56.483191 Начало поиска в дирректории: C:/Users/golikov.s/git/GUI---Find-duplicates
+2026-10-21 17:14:56.485189 Ошибка в процессе поика дублей: [Errno 2] No such file or directory: 'C:\\Users\\golikov.s\\git\\GUI---Find-duplicates\\ignore_extensions.dat'
+2026-10-21 17:18:58.339512 GUI - Find duplicates ИД процесса: 17812 [<class 'int'>]
+2026-10-21 17:19:22.759191 Начало поиска в дирректории: C:/Users/golikov.s/git/GUI---Find-duplicates
+2026-10-21 17:19:22.761186 Список игнорируемых расширений: ['.CFL', '.7Z', '.LNK', '.AVIF', '.DTHUMB', '.INI', '.HTML', '.CFL', '.DAT', '.1CD', '.LGP', '.LGF', '.LNK', '.ZIP', '.GIT', '.PY', '.XML', '']
+2026-10-21 17:19:22.767166 Дирректория .git в списке игнорируемых. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates
+2026-10-21 17:19:22.768163 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\1.txt
+2026-10-21 17:19:22.769161 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\A5.txt
+2026-10-21 17:19:22.769161 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\cropped_img.py
+2026-10-21 17:19:22.770158 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\dataMD5.txt
+2026-10-21 17:19:22.771156 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\dataRu1.txt
+2026-10-21 17:19:22.772153 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\find_double.py
+2026-10-21 17:19:22.773151 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\find_md5.py
+2026-10-21 17:19:22.774148 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\ignore extensions from list.txt
+2026-10-21 17:19:22.775145 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\logs.py
+2026-10-21 17:19:22.775145 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\moving_remove_files.py
+2026-10-21 17:19:22.777140 Расширение .ini в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\sample.ini
+2026-10-21 17:19:22.777140 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\sent.txt
+2026-10-21 17:19:22.778138 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\spam.txt
+2026-10-21 17:19:22.779134 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\subprocess_ps.py
+2026-10-21 17:19:22.780132 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\subprocess_ps_no_window.py
+2026-10-21 17:19:22.781129 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\test.txt
+2026-10-21 17:19:22.782127 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\test_config.py
+2026-10-21 17:19:22.782127 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\test_exist.py
+2026-10-21 17:19:22.783124 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .pyw - Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\textarea.pyw
+2026-10-21 17:19:22.784121 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\walk.py
+2026-10-21 17:19:22.785118 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\walk_popen.py
+2026-10-21 17:19:25.056953 Поиск завершен...
+
+2026-10-21 17:20:21.904028 Начало поиска в дирректории: C:/Users/golikov.s/git/GUI---Find-duplicates
+2026-10-21 17:20:21.904028 Список игнорируемых расширений: ['.CFL', '.7Z', '.LNK', '.AVIF', '.DTHUMB', '.INI', '.HTML', '.CFL', '.DAT', '.1CD', '.LGP', '.LGF', '.LNK', '.ZIP', '.GIT', '.PY', '.XML', '']
+2026-10-21 17:20:21.909016 Дирректория .git в списке игнорируемых. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates
+2026-10-21 17:20:21.910014 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\1.txt"
+2026-10-21 17:20:22.978635 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\1.txt:
+0be2339b81a1c5fa8e8c6a43b9be8b8f46f71779
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:22.980629 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\A5.txt"
+2026-10-21 17:20:23.327393 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\A5.txt:
+13e233deececc6f9576d0f1508f93b90455fc5da
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:23.328417 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\cropped_img.py
+2026-10-21 17:20:23.329390 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\dataMD5.txt"
+2026-10-21 17:20:23.668038 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\dataMD5.txt:
+0250a7b095bc6a969adbe25de14d23c4224d37c3
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:23.669498 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\dataRu1.txt"
+2026-10-21 17:20:24.009208 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\dataRu1.txt:
+47cb1e99c8c36df7805f268b1656a41000d41da8
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:24.010204 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\find_double.py
+2026-10-21 17:20:24.011202 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\find_md5.py
+2026-10-21 17:20:24.013196 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\ignore extensions from list.txt"
+2026-10-21 17:20:24.348997 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\ignore extensions from list.txt:
+291065fa19b3a86898158ab175d77d4f22120db2
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:24.349537 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\logs.py
+2026-10-21 17:20:24.350534 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\moving_remove_files.py
+2026-10-21 17:20:24.355521 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\file-log.log"
+2026-10-21 17:20:24.709618 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\file-log.log:
+76ba6000e74e4ba720289438e10996f9478d2102
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:24.710647 Расширение .dat в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\ignore_extensions.dat
+2026-10-21 17:20:24.712609 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\100.png"
+2026-10-21 17:20:25.060472 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\100.png:
+2d3edb6561753c6693a255fdccfc9f8e13401b14
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:25.061469 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\125.png"
+2026-10-21 17:20:25.400378 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\125.png:
+9c1f63cc5681875260ba7dc0681e1b03cee0d817
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:25.401375 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\150.png"
+2026-10-21 17:20:25.739449 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\150.png:
+c931a8fdf36a3e6ad104d681f4c3cddf471973fe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:25.740447 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\175.png"
+2026-10-21 17:20:26.075519 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\175.png:
+40a5e9414e4faf6b79430ecf268347d60e5a8f9c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:26.076519 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\200.png"
+2026-10-21 17:20:26.425108 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\200.png:
+1a22922e14afe453b15be6504c07fbadb0ef40b4
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:26.426107 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png"
+2026-10-21 17:20:26.786101 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png:
+b65ce82b8fd9befab2ce8911e51bb9d9f78a69ba
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:26.787098 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png"
+2026-10-21 17:20:27.129562 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png:
+b65ce82b8fd9befab2ce8911e51bb9d9f78a69ba
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:27.130560 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png
+2026-10-21 17:20:27.132556 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\85.png"
+2026-10-21 17:20:27.485731 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\85.png:
+0409bb2dbe28a061a2b95effe38e0017c694b3fe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:27.486756 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ЗеленаяГалка\manifest.xml
+2026-10-21 17:20:27.487735 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Picture.png"
+2026-10-21 17:20:27.827630 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Picture.png:
+06857195f22e74bb806ff44db3698f1d542d0fe5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:27.828601 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Thumbs.db"
+2026-10-21 17:20:28.166303 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Thumbs.db:
+2c12577ec8a24d847b529a5d29a15039f4bdeb2a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:28.168295 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\manifest.xml
+2026-10-21 17:20:28.169305 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png"
+2026-10-21 17:20:28.528915 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png:
+977960c57bbc2ec2a18d4e44d45be217b211f761
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:28.530906 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png"
+2026-10-21 17:20:28.877806 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png:
+977960c57bbc2ec2a18d4e44d45be217b211f761
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:28.878831 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png
+2026-10-21 17:20:28.881796 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png"
+2026-10-21 17:20:29.236344 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png:
+6af826b037b767e0214c8fda2a851e7bac6de881
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:29.237341 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png"
+2026-10-21 17:20:29.571468 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png:
+6af826b037b767e0214c8fda2a851e7bac6de881
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:29.571468 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png
+2026-10-21 17:20:29.573463 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png"
+2026-10-21 17:20:29.916719 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png:
+d87b3bb2e106d6a28280bc08acab80293bfd745d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:29.917716 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png"
+2026-10-21 17:20:30.255817 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png:
+d87b3bb2e106d6a28280bc08acab80293bfd745d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:30.255817 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png
+2026-10-21 17:20:30.257813 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png"
+2026-10-21 17:20:30.592937 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png:
+da3b4b86c1bc05e05a32096ac6d8b058a3d89d51
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:30.593960 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png"
+2026-10-21 17:20:30.923573 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png:
+da3b4b86c1bc05e05a32096ac6d8b058a3d89d51
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:30.923573 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png
+2026-10-21 17:20:30.926540 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png"
+2026-10-21 17:20:31.258947 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png:
+2b1bca7d3fa8cb49b0e39c2cebae7e253f8e5f82
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:31.259970 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png"
+2026-10-21 17:20:31.596931 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png:
+2b1bca7d3fa8cb49b0e39c2cebae7e253f8e5f82
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:31.596931 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png
+2026-10-21 17:20:31.599896 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png"
+2026-10-21 17:20:31.939056 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png:
+391247bbaf396ae6bdaef82fbccc62b698d58b98
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:31.940044 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png"
+2026-10-21 17:20:32.279292 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png:
+391247bbaf396ae6bdaef82fbccc62b698d58b98
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:32.280289 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png
+2026-10-21 17:20:32.281286 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png"
+2026-10-21 17:20:32.616178 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png:
+948f1fafee042089f1bc32cec412faa7740d8265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:32.617175 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png"
+2026-10-21 17:20:32.949348 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png:
+948f1fafee042089f1bc32cec412faa7740d8265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:32.949348 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png
+2026-10-21 17:20:32.951343 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png"
+2026-10-21 17:20:33.306446 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png:
+74b1d69b19a0512088991bd5429338c20857cf4e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:33.307433 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png"
+2026-10-21 17:20:33.642579 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png:
+74b1d69b19a0512088991bd5429338c20857cf4e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:33.642579 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png
+2026-10-21 17:20:33.644601 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png"
+2026-10-21 17:20:33.999905 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png:
+654d2847606a94bad78c7b7f0a755aac29c9dba1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:34.000904 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png"
+2026-10-21 17:20:34.414274 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png:
+d5985b54d0337e8d8d0224a66c47860a9d88a1e5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:34.416268 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png"
+2026-10-21 17:20:34.750995 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png:
+d5985b54d0337e8d8d0224a66c47860a9d88a1e5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:34.751992 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png
+2026-10-21 17:20:34.753988 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png"
+2026-10-21 17:20:35.093808 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png:
+654d2847606a94bad78c7b7f0a755aac29c9dba1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:35.093808 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png
+2026-10-21 17:20:35.096807 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\h.png"
+2026-10-21 17:20:35.440127 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\h.png:
+16ca02c8cf229c008c1553516a4906935efe4e20
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:35.441124 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\l.png"
+2026-10-21 17:20:35.771608 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\l.png:
+0ba68fbfaecd821746af1d07cbab83dc9d0b4c56
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:35.772606 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\m.png"
+2026-10-21 17:20:36.110232 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\m.png:
+ed0d7357871ad358d30aa799876952121b1c5d53
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:36.111229 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ОткрытьФайл\manifest.xml
+2026-10-21 17:20:36.112226 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile.png"
+2026-10-21 17:20:36.442989 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile.png:
+2f2a89089e0c6724ad3b44163c4f856d5124e01f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:36.443986 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_100.png"
+2026-10-21 17:20:36.778406 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_100.png:
+a4e38d0400d06ce7dbe52011600c691734aa8b86
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:36.779404 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_125.png"
+2026-10-21 17:20:37.114424 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_125.png:
+bd46a071656594f222a198d482749c52fd9c9d9a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:37.115421 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_150.png"
+2026-10-21 17:20:37.471775 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_150.png:
+ff498683670ac29a14063b8dd7ad30df8e7ed1c7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:37.472772 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_175.png"
+2026-10-21 17:20:37.810685 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_175.png:
+325bc7d802bc58ccc5231fc2df6ca06e3e533fa0
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:37.811682 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_200.png"
+2026-10-21 17:20:38.150593 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_200.png:
+e40defbc9b5ecd66a04f78428eb466052c551170
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:38.151591 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_300.png"
+2026-10-21 17:20:38.505769 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_300.png:
+d7c695febdeaf0734f53c12e7785cd221fe04da6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:38.507764 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_400.png"
+2026-10-21 17:20:38.869792 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_400.png:
+e605e227947fb670caf531291d123ff51752c493
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:38.870790 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_85.png"
+2026-10-21 17:20:39.209894 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_85.png:
+9293a72e356481d02cac5489f9c8c475ae212d73
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:39.210885 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_old.png"
+2026-10-21 17:20:39.573105 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_old.png:
+c4af5b114b34006b9edb16e8005856876c2b9a56
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:39.574103 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\Thumbs.db"
+2026-10-21 17:20:39.914200 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\Thumbs.db:
+384872b68057d2bf5d856892a5817cf3cfacf793
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:39.915196 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\x.png"
+2026-10-21 17:20:40.254530 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\x.png:
+19d96c215aefb8d3e0df80f6d966ab9535032f9d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:40.255527 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\100.png"
+2026-10-21 17:20:40.605977 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\100.png:
+add5ebd939d3ed8754b1bd703b1128f066a196b9
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:40.606973 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\125.png"
+2026-10-21 17:20:40.937378 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\125.png:
+1c1ccb352da3896b4174544dfd4fbefdf50e9e0a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:40.938376 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\150.png"
+2026-10-21 17:20:41.273001 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\150.png:
+58e87f994e88aa3341c47c773eb8566f57903cd6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:41.273999 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\175.png"
+2026-10-21 17:20:41.614711 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\175.png:
+4b47393fb07d6c4720d964e1ff979b7713391565
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:41.615708 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\200.png"
+2026-10-21 17:20:41.962209 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\200.png:
+90dc8275b9591e43f6af57b7ecee48bc6238099b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:41.963207 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\300.png"
+2026-10-21 17:20:42.313922 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\300.png:
+0d5fbb3728811272447ea7332b9290177ff2f559
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:42.314919 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\400.png"
+2026-10-21 17:20:42.656535 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\400.png:
+16452fc25fcb07535a0bc58ea81015afc65a7158
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:42.657532 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\85.png"
+2026-10-21 17:20:42.992642 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\85.png:
+8c47fecf754069e9aec3fc170448cc4185fcd2ac
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:42.993639 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\cropped_pillow_125.png"
+2026-10-21 17:20:43.344942 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\cropped_pillow_125.png:
+1ef0212764e9b5704fe1aa7614b74974c676dbf1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:43.345935 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Папки\manifest.xml
+2026-10-21 17:20:43.346932 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\Picture.png"
+2026-10-21 17:20:43.683057 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\Picture.png:
+b1ca7b1ed5311a82c71a096dd68eb3407ee11fd6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:43.684054 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\h.png"
+2026-10-21 17:20:44.013564 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\h.png:
+70fdc3fdf244912d02adef152439d564678aa345
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:44.014562 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\l.png"
+2026-10-21 17:20:44.367088 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\l.png:
+5e8d086da487f3ecd4b93b8ef4256cf5b94b301a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:44.368086 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\m.png"
+2026-10-21 17:20:44.705096 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\m.png:
+25c750e50238dbe3a40181bf4ba98a6d23bdce94
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:44.706094 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ПоказатьДанные\manifest.xml
+2026-10-21 17:20:44.707091 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png"
+2026-10-21 17:20:45.039208 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png:
+5e8d086da487f3ecd4b93b8ef4256cf5b94b301a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:45.039208 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ПоказатьДанные\l.png в: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png
+2026-10-21 17:20:45.042202 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_100.png"
+2026-10-21 17:20:45.399951 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_100.png:
+31e514ed66b67ecf006159879269fb1c60d44de8
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:45.401943 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_125.png"
+2026-10-21 17:20:45.740107 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_125.png:
+8febfbc413cad9da6a44e4865fd5c0f88f441735
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:45.741103 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_150.png"
+2026-10-21 17:20:46.079985 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_150.png:
+6b2a968fb9a6be80f249f19891c3ccf25bd21563
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:46.080979 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_175.png"
+2026-10-21 17:20:46.430122 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_175.png:
+b3ee12932d8068bec3d9ef5eec3b16bc833d59f8
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:46.431119 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_200.png"
+2026-10-21 17:20:46.794140 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_200.png:
+2422d41aabcb40e36243ecdd272ed836db89e62b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:46.795137 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_300.png"
+2026-10-21 17:20:47.130033 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_300.png:
+acb0c489afd6f695016a9e9c5b3662cf1542d67d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:47.132028 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_400.png"
+2026-10-21 17:20:47.493067 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_400.png:
+74e3f58a886b09958deda50444e30b1fcad23c45
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:47.494064 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_85.png"
+2026-10-21 17:20:47.825211 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_85.png:
+63620922df5e91ea7ec403d055e3504d7d46269b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:47.826208 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_old.png"
+2026-10-21 17:20:48.156861 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_old.png:
+217e89bdc961739656b77828b9114b7b4620a2b1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:48.157859 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\x.png"
+2026-10-21 17:20:48.497012 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\x.png:
+e160a7cab8f3527d05b19237d602e89541b672ca
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:48.498009 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\h.png"
+2026-10-21 17:20:48.838116 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\h.png:
+735d3107418a51a1f0234be4371891f18d495086
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:48.839114 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\l.png"
+2026-10-21 17:20:49.243366 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\l.png:
+171e8d95bf5551b38d52f98c6f23b193eb396f7d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:49.245360 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\m.png"
+2026-10-21 17:20:49.652015 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\m.png:
+cb489e93c6f1f7ca458483579163e3d2af61fe5e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:49.653012 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\manifest.xml
+2026-10-21 17:20:49.654009 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti.png"
+2026-10-21 17:20:50.009920 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti.png:
+bd444a420ba647d134a4d611ffc86edbaafc60ff
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:50.010918 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_100.png"
+2026-10-21 17:20:50.351779 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_100.png:
+2f8fe06eebe5a71be679d0abe5c7c6429a00d5df
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:50.352776 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_125.png"
+2026-10-21 17:20:50.713961 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_125.png:
+d56aa8776cee832a41a073a67d232e4ad5bc4bd0
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:50.714987 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_150.png"
+2026-10-21 17:20:51.061001 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_150.png:
+42b61610379b3ec5c81afc7152e9ad1914eb34bc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:51.061997 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_175.png"
+2026-10-21 17:20:51.410646 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_175.png:
+cd395d86b78bc0cdc31d30a8aaf6e62d2499344f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:51.411639 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_200.png"
+2026-10-21 17:20:51.760523 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_200.png:
+d5d4c0990ef9c87b8f050f9c01fe8ad227697d44
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:51.761519 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_300.png"
+2026-10-21 17:20:52.108681 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_300.png:
+668dbd2c8d40473799c0e5f5b2bd32ad829ad662
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:52.109679 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_400.png"
+2026-10-21 17:20:52.460256 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_400.png:
+752d45986fcc37f1bff1712248e52e0bf563d637
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:52.461254 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_85.png"
+2026-10-21 17:20:52.812801 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_85.png:
+62088a0aed73fe8b20d9abbce79f53192906daa6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:52.813828 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_old.bmp"
+2026-10-21 17:20:53.159385 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_old.bmp:
+08517480fb1ee04a70cd910388ba264e00a1aec6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:53.160416 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\x.png"
+2026-10-21 17:20:53.514555 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\x.png:
+a4d9bc6087b26d1b6400440d2ff1fcdd0a997ada
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:53.517546 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\h.png"
+2026-10-21 17:20:53.863709 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\h.png:
+c06bf6c9e4908468709bdd9138c82033d45d3ddc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:53.864706 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\l.png"
+2026-10-21 17:20:54.205767 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\l.png:
+1df3374addb9597cce06e986b6fc26df1163785b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:54.206738 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\m.png"
+2026-10-21 17:20:54.545585 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\m.png:
+725480bf080fb85d8b22424b496bc8087b3403d1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:54.546611 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\manifest.xml
+2026-10-21 17:20:54.547607 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti.png"
+2026-10-21 17:20:54.883087 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti.png:
+215181d910554887ee442d1925f329eb8b2ec941
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:54.884084 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_100.png"
+2026-10-21 17:20:55.217536 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_100.png:
+48e40847b3412635e8931ea0c5976db921ccfe13
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:55.218532 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_125.png"
+2026-10-21 17:20:55.558193 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_125.png:
+49e519ebe90046b3b2516546c06883210409b773
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:55.559191 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_150.png"
+2026-10-21 17:20:55.903198 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_150.png:
+b60f0ead355f21510ea87c1a7326b7b1be31e9ac
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:55.904195 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_175.png"
+2026-10-21 17:20:56.242614 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_175.png:
+bf74453392947e0c1ec133a4f25bc04388d2e965
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:56.243611 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_200.png"
+2026-10-21 17:20:56.586129 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_200.png:
+cc70364664d17eae3518de58f781f4d8d205a316
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:56.587102 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_300.png"
+2026-10-21 17:20:56.931185 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_300.png:
+12fb0ddbfa00e7f8a4789fa5432948dc3e52642e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:56.932181 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_400.png"
+2026-10-21 17:20:57.270632 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_400.png:
+5de3faca585855b8f82439dfdf3ad197a16596b9
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:57.271629 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_85.png"
+2026-10-21 17:20:57.612053 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_85.png:
+4accdad3cd62c6048339bd7ac63b17e039d25308
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:57.613050 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_old.bmp"
+2026-10-21 17:20:57.969365 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_old.bmp:
+a95d1c5076a9779bb854c5adb07ec88ca6c19ec2
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:57.971359 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\x.png"
+2026-10-21 17:20:58.308398 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\x.png:
+71beb7a82ce8ff42745fd3464fe1fbe3b868e807
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:58.310393 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\100.png"
+2026-10-21 17:20:58.661018 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\100.png:
+0842d0b06d5019c3bc01d5702c977141674f9899
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:58.662015 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\125.png"
+2026-10-21 17:20:59.022317 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\125.png:
+be5de3519cf679bae87ff0c75c603801865b7d4f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:59.024338 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\150.png"
+2026-10-21 17:20:59.378640 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\150.png:
+024b49a1bd89a24ca81b0866b25b15e87ef78c9e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:59.379667 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\175.png"
+2026-10-21 17:20:59.793966 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\175.png:
+931550864e8546f8fee72009554fadec2f55fd06
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:20:59.794965 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\200.png"
+2026-10-21 17:21:00.199888 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\200.png:
+9db8c8fdb673eec31820288b2b6bb9c67124d1f3
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:00.200885 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\300.png"
+2026-10-21 17:21:00.585601 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\300.png:
+22c82acd11c09a4fca3b96ea8d53cc5175853084
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:00.586596 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\400.png"
+2026-10-21 17:21:01.015725 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\400.png:
+d1c852ca2f4a4f37bbd0a852d05c031aad3b4ffe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:01.016722 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\85.png"
+2026-10-21 17:21:01.395730 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\85.png:
+e64b0936d91be444ac493b0577e760a357aa90cb
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:01.396728 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\manifest.xml
+2026-10-21 17:21:01.398630 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Picture.png"
+2026-10-21 17:21:01.786908 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Picture.png:
+aa855e9df677cbecc3be2e0a2cf1117d4521be1b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:01.787906 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Thumbs.db"
+2026-10-21 17:21:02.152383 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Thumbs.db:
+e909032654bcb9b4af8bc3a677bdf2eacf426ffa
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:02.154377 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\h.png"
+2026-10-21 17:21:02.510490 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\h.png:
+5586beac0c7a06f9576e366981240b9114d8542f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:02.512484 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\l.png"
+2026-10-21 17:21:02.886217 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\l.png:
+73b975fe74492eb86ac557c7c410aeede775c187
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:02.887216 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\m.png"
+2026-10-21 17:21:03.230794 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\m.png:
+662645b32645ad6c868707fac2e730e5dfb1bf6f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:03.231793 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\СохранитьФайл\manifest.xml
+2026-10-21 17:21:03.232815 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile.png"
+2026-10-21 17:21:03.623123 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile.png:
+726ebc86383ac1e77e47534785b4cbc945bdecdf
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:03.624121 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_100.png"
+2026-10-21 17:21:04.023805 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_100.png:
+7764fafaf37e35b70b186415f8402d72dfbb0598
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:04.024801 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_125.png"
+2026-10-21 17:21:04.415929 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_125.png:
+50ce4e7adfae5c3a48e0c9a3ae96e96fb114a265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:04.417924 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_150.png"
+2026-10-21 17:21:04.820667 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_150.png:
+a7a845298305de3699a6f41aa0c57f7ddb6c0d12
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:04.821662 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_175.png"
+2026-10-21 17:21:05.203647 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_175.png:
+eb6f92884e8b8130f3d9923cf564d2a9fb678ce5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:05.204644 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_200.png"
+2026-10-21 17:21:05.606263 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_200.png:
+3c5f8382291bbbb69fac7858e2a8ea889253e64d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:05.607286 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_300.png"
+2026-10-21 17:21:05.948500 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_300.png:
+946a3467cf5367dbe9c00be9da41b36d1af3bf39
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:05.949497 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_400.png"
+2026-10-21 17:21:06.303508 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_400.png:
+88456f317a886e94346075f2cdfd8cb266ee359f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:06.304477 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_85.png"
+2026-10-21 17:21:06.643994 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_85.png:
+c919caa6eef1f90aabac07ad0476eed277a73b8a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:06.645017 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_old.png"
+2026-10-21 17:21:06.986089 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_old.png:
+be1d9827285639a096dbcfeef1dbd3e42eb38a43
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:06.987087 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\x.png"
+2026-10-21 17:21:07.330154 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\x.png:
+edc32ee85173d379ed5b053dce76a6d667875cb4
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:07.332144 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\100.png"
+2026-10-21 17:21:07.740386 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\100.png:
+60c4b125d6c815d509ed46978dcea3f827c5ce84
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:07.741383 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\125.png"
+2026-10-21 17:21:08.131856 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\125.png:
+80dc52f4fc666f87017614a11224df0a58de94cc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:08.132859 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\150.png"
+2026-10-21 17:21:08.469274 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\150.png:
+8c6e2bc2c29ea15d37dd40e1374d121ce77e27ea
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:08.470300 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\175.png"
+2026-10-21 17:21:08.806690 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\175.png:
+2825872e9ccde811f642802b98cc75d7624172d2
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:08.807713 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\200.png"
+2026-10-21 17:21:09.192003 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\200.png:
+423f6c95e50c61f1942915e5ad332f87c0075936
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:09.193032 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\300.png"
+2026-10-21 17:21:09.536089 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\300.png:
+14f4c5eb59c512a67ec9d30b4b40528cd6f5de1a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:09.537086 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\400.png"
+2026-10-21 17:21:09.876575 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\400.png:
+0b5462f70d4618548418741874ba062b4e705014
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:09.877572 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\85.png"
+2026-10-21 17:21:10.205831 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\85.png:
+e527329601e02cd66f406abd718bb8d03b2e5c0a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:10.206802 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\Структура\manifest.xml
+2026-10-21 17:21:10.207799 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\Picture.png"
+2026-10-21 17:21:10.541681 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\Picture.png:
+ff1207ba3af4ed23f53fcc7300b6a93d0a98fd5c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:10.543675 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\100.png"
+2026-10-21 17:21:10.879425 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\100.png:
+81483df6e08280e27d2e725acb08414eab34e9af
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:10.880423 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\125.png"
+2026-10-21 17:21:11.217992 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\125.png:
+d923925cf7f9cf2c3cdae2fdfe0d3b49e313554d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:11.218989 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\150.png"
+2026-10-21 17:21:11.567570 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\150.png:
+e4d53649420b025751bab830a7bbe5869faf8632
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:11.568567 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\175.png"
+2026-10-21 17:21:11.907093 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\175.png:
+dfecdfeec927d2b0c84c2aa2233679957dd42635
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:11.908090 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\200.png"
+2026-10-21 17:21:12.241518 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\200.png:
+b25b9156211a00d99a893b0bc921a4c027ed8805
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:12.242515 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\300.png"
+2026-10-21 17:21:12.600706 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\300.png:
+5be35419ea648ffd0a94c0e9db0e050268102355
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:12.601698 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\400.png"
+2026-10-21 17:21:12.933666 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\400.png:
+1131dbd45f1e56489773ca5a75c3d1736ac455ed
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:12.934664 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\85.png"
+2026-10-21 17:21:13.279259 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\85.png:
+6076be278f6218964d28b325d4df48afc4d5bd2f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:13.279259 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\manifest.xml
+2026-10-21 17:21:13.281254 Защищенные точкой папки ._100.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.281254 Защищенные точкой папки ._125.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.281254 Защищенные точкой папки ._150.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.282252 Защищенные точкой папки ._175.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.282252 Защищенные точкой папки ._200.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.282252 Защищенные точкой папки ._300.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.283249 Защищенные точкой папки ._400.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.283249 Защищенные точкой папки ._85.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.283249 Защищенные точкой папки ._manifest.xml. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:21:13.285245 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\100.png"
+2026-10-21 17:21:13.620587 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\100.png:
+b751fac165366b9d9cb6cef730d4182dada76609
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:13.621585 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\125.png"
+2026-10-21 17:21:13.959016 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\125.png:
+9c347d6891bd85bbf4d31d5cb2fcb9c0abc958f7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:13.960015 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\150.png"
+2026-10-21 17:21:14.305189 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\150.png:
+65b068747bdbaa54838753ee8bdfaaa727648808
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:14.306160 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\175.png"
+2026-10-21 17:21:14.640731 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\175.png:
+6d02dc5aeda0cb3933d5e00e17539f36155c4991
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:14.641728 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\200.png"
+2026-10-21 17:21:15.036831 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\200.png:
+a8470607d0ec6466fca25c071c20c76022628253
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:15.037812 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\300.png"
+2026-10-21 17:21:15.387297 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\300.png:
+6fd4366e4f21e8a6b10e7ffbc7db4b3fb79c2b54
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:15.388294 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\400.png"
+2026-10-21 17:21:15.727847 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\400.png:
+d2076ace5316e5a5b09c5d9afed13ed0ca486540
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:15.728845 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\85.png"
+2026-10-21 17:21:16.068610 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\85.png:
+f5f7cc566a699c2e6d264eee6189de567708126d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:16.069607 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\manifest.xml
+2026-10-21 17:21:16.070604 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\Thumbs.db"
+2026-10-21 17:21:16.406435 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\Thumbs.db:
+69d77fd2605aee473d3774dfa1541da23c04596f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:16.407432 Защищенные точкой папки ._100.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.408429 Защищенные точкой папки ._125.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.408429 Защищенные точкой папки ._150.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.409426 Защищенные точкой папки ._175.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.409426 Защищенные точкой папки ._200.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.409426 Защищенные точкой папки ._300.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.410424 Защищенные точкой папки ._400.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.410424 Защищенные точкой папки ._85.png. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.410424 Защищенные точкой папки ._manifest.xml. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:21:16.412418 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\100.png"
+2026-10-21 17:21:16.746735 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\100.png:
+c7b1c62a6530c2c027141e685f380500da6fd479
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:16.747718 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\125.png"
+2026-10-21 17:21:17.107802 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\125.png:
+9c14edd56dd7ea4b927d2d99d54095b2c41a71a6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:17.108799 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\150.png"
+2026-10-21 17:21:17.541691 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\150.png:
+dfbae70c56912d9dcd67a34eb2abea5222b1c76e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:17.542686 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\175.png"
+2026-10-21 17:21:17.934251 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\175.png:
+edcb929e8a4c0aba18a5197c8319cd331d51118b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:17.935249 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\200.png"
+2026-10-21 17:21:18.272867 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\200.png:
+d3b2004482d0391dac2c1d22df1b596f4dc67c6c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:18.273838 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\300.png"
+2026-10-21 17:21:18.609822 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\300.png:
+6dbacbe9fb50dbb1990ef670da6e9e7b8e79bd32
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:18.610820 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\400.png"
+2026-10-21 17:21:18.941517 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\400.png:
+0ef82165824a8dfdd3079c9dc7f49fa5027e56a7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:18.942515 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\85.png"
+2026-10-21 17:21:19.284602 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\85.png:
+dbb756a8a36bb1dcabe4f6a872ce146f1f960159
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:19.285599 Расширение .xml в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\res\img\ФлажокИКрестик\manifest.xml
+2026-10-21 17:21:19.286596 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\Picture.png"
+2026-10-21 17:21:19.638014 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\Picture.png:
+6cd4ce6612e7693a84bb7557c35e0448ce915380
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:19.639011 Расширение .ini в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\sample.ini
+2026-10-21 17:21:19.643000 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\sent.txt"
+2026-10-21 17:21:20.034136 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\sent.txt:
+132af6bccf1b6e6b833a04c943cd1c61fe14678b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:20.035134 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\spam.txt"
+2026-10-21 17:21:20.368570 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\spam.txt:
+7e8877721b09805c95e96171c3c5a3e3dc7d634d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:20.369540 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\subprocess_ps.py
+2026-10-21 17:21:20.370538 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\subprocess_ps_no_window.py
+2026-10-21 17:21:20.371537 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\test.txt"
+2026-10-21 17:21:20.721115 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\test.txt:
+0be2339b81a1c5fa8e8c6a43b9be8b8f46f71779
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:20.721115 Найдена копия файла: C:/Users/golikov.s/git/GUI---Find-duplicates\1.txt в: C:/Users/golikov.s/git/GUI---Find-duplicates\test.txt
+2026-10-21 17:21:20.722112 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\test_config.py
+2026-10-21 17:21:20.723109 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\test_exist.py
+2026-10-21 17:21:20.724106 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\textarea.pyw"
+2026-10-21 17:21:21.058745 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\textarea.pyw:
+23df5d897046fdba1f2c52ed3e0cfbdc50732ee2
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:21.059743 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\walk.py
+2026-10-21 17:21:21.060740 Расширение .py в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\walk_popen.py
+2026-10-21 17:21:21.061737 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\__pycache__\logs.cpython-311.pyc"
+2026-10-21 17:21:21.401353 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\__pycache__\logs.cpython-311.pyc:
+4d0399e2423c562223ec7b06ca5fb32f34429de6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:21.402377 Защищенные точкой папки .nomedia. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования
+2026-10-21 17:21:21.403346 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\file-log.log"
+2026-10-21 17:21:21.759935 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\file-log.log:
+4af0f527b66ed05db08195b090dae10fe7b073ba
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:21:21.760902 Расширение .dat в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования\walk_popen.py_Контрольная сумма SHA-512.dat
+2026-10-21 17:21:21.761900 Расширение .lnk в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования\Инструменты разработчика.lnk
+2026-10-21 17:21:21.762898 Расширение .dat в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования\Контрольная сумма SHA-512.dat
+2026-10-21 17:21:21.763895 Расширение .zip в списке игнорируемых. Путь к файлу: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования\Контрольная сумма SHA-512.zip
+2026-10-21 17:21:21.765889 Защищенные точкой папки .metadata. Путь к папке: C:/Users/golikov.s/git/GUI---Find-duplicates\Дирректория тестирования\Новая папка (2)\965
+2026-10-21 17:21:23.379549 Поиск завершен...
+
+2026-10-21 17:33:01.751576 GUI - Find duplicates ИД процесса: 6832 [<class 'int'>]
+2026-10-21 17:37:21.100715 GUI - Find duplicates ИД процесса: 2396 [<class 'int'>]
+2026-10-21 17:37:33.982513 Начало поиска в дирректории: C:\Users\golikov.s\git\GUI---Find-duplicates
+2026-10-21 17:37:33.983511 Список игнорируемых расширений: ['.CFL', '.7Z', '.LNK', '.AVIF', '.DTHUMB', '.INI', '.HTML', '.CFL', '.DAT', '.1CD', '.LGP', '.LGF', '.LNK', '.ZIP', '.GIT', '.PY', '.XML']
+2026-10-21 17:37:33.988497 Дирректория .git в списке игнорируемых. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates
+2026-10-21 17:37:33.989467 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\1.txt
+2026-10-21 17:37:33.990464 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\A5.txt
+2026-10-21 17:37:33.991490 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\cropped_img.py
+2026-10-21 17:37:33.992459 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\dataMD5.txt
+2026-10-21 17:37:33.993456 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\dataRu1.txt
+2026-10-21 17:37:33.994481 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\find_double.py
+2026-10-21 17:37:33.994481 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\find_md5.py
+2026-10-21 17:37:33.996475 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\ignore extensions from list.txt
+2026-10-21 17:37:33.996475 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\logs.py
+2026-10-21 17:37:33.997446 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\moving_remove_files.py
+2026-10-21 17:37:33.999439 Расширение .ini в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\sample.ini
+2026-10-21 17:37:34.000465 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\sent.txt
+2026-10-21 17:37:34.001434 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\spam.txt
+2026-10-21 17:37:34.001434 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\subprocess_ps.py
+2026-10-21 17:37:34.002432 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\subprocess_ps_no_window.py
+2026-10-21 17:37:34.003456 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test.txt
+2026-10-21 17:37:34.004427 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test_config.py
+2026-10-21 17:37:34.005452 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test_exist.py
+2026-10-21 17:37:34.006448 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .pyw - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\textarea.pyw
+2026-10-21 17:37:34.007445 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\walk.py
+2026-10-21 17:37:34.008442 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\walk_popen.py
+2026-10-21 17:37:35.394422 Поиск завершен...
+
+2026-10-21 17:37:49.024616 Начало поиска в дирректории: C:\Users\golikov.s\git\GUI---Find-duplicates
+2026-10-21 17:37:49.026612 Список игнорируемых расширений: ['.CFL', '.7Z', '.LNK', '.AVIF', '.DTHUMB', '.INI', '.HTML', '.CFL', '.DAT', '.1CD', '.LGP', '.LGF', '.LNK', '.ZIP', '.GIT', '.PY', '.XML']
+2026-10-21 17:37:49.031597 Дирректория .git в списке игнорируемых. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates
+2026-10-21 17:37:49.032594 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\1.txt
+2026-10-21 17:37:49.033592 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\A5.txt
+2026-10-21 17:37:49.033592 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\cropped_img.py
+2026-10-21 17:37:49.034589 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\dataMD5.txt
+2026-10-21 17:37:49.035587 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\dataRu1.txt
+2026-10-21 17:37:49.036590 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\find_double.py
+2026-10-21 17:37:49.037582 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\find_md5.py
+2026-10-21 17:37:49.038578 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\ignore extensions from list.txt
+2026-10-21 17:37:49.038578 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\logs.py
+2026-10-21 17:37:49.039576 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\moving_remove_files.py
+2026-10-21 17:37:49.069528 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .log - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\file-log.log
+2026-10-21 17:37:49.070524 Расширение .dat в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\ignore_extensions.dat
+2026-10-21 17:37:49.073519 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\100.png"
+2026-10-21 17:37:50.107544 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\100.png:
+2d3edb6561753c6693a255fdccfc9f8e13401b14
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:50.108536 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\125.png"
+2026-10-21 17:37:50.480715 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\125.png:
+9c1f63cc5681875260ba7dc0681e1b03cee0d817
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:50.481713 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\150.png"
+2026-10-21 17:37:50.824247 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\150.png:
+c931a8fdf36a3e6ad104d681f4c3cddf471973fe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:50.825244 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\175.png"
+2026-10-21 17:37:51.154877 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\175.png:
+40a5e9414e4faf6b79430ecf268347d60e5a8f9c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:51.155900 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\200.png"
+2026-10-21 17:37:51.491164 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\200.png:
+1a22922e14afe453b15be6504c07fbadb0ef40b4
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:51.492162 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png"
+2026-10-21 17:37:51.825480 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png:
+b65ce82b8fd9befab2ce8911e51bb9d9f78a69ba
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:51.826475 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png"
+2026-10-21 17:37:52.176908 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png:
+b65ce82b8fd9befab2ce8911e51bb9d9f78a69ba
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:52.176908 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\300.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\400.png
+2026-10-21 17:37:52.179900 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\85.png"
+2026-10-21 17:37:52.544634 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\85.png:
+0409bb2dbe28a061a2b95effe38e0017c694b3fe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:52.545660 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\manifest.xml
+2026-10-21 17:37:52.546656 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Picture.png"
+2026-10-21 17:37:52.883303 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Picture.png:
+06857195f22e74bb806ff44db3698f1d542d0fe5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:52.884300 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .db - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ЗеленаяГалка\Thumbs.db
+2026-10-21 17:37:52.886295 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\100.png"
+2026-10-21 17:37:53.228932 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\100.png:
+cc81f3df16ab2d582f779f181682a4a033eed44b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:53.229929 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\125.png"
+2026-10-21 17:37:53.566145 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\125.png:
+46f2272f9278ceca0e4643c8e1cce39223c002cd
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:53.567142 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\150.png"
+2026-10-21 17:37:53.903507 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\150.png:
+31d860d8b8b489913d4fc192bf9c056ce25ce2da
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:53.904505 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\175.png"
+2026-10-21 17:37:54.237187 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\175.png:
+10f8f02c85d1105cada82fbba0e02e9d89daf15d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:54.238186 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\200.png"
+2026-10-21 17:37:54.580538 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\200.png:
+ad9eb6fb11c23078cf61785abb6f5fc931a3501d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:54.581537 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\300.png"
+2026-10-21 17:37:54.913553 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\300.png:
+35033c2782b3ddbbb149561574dc47fcd96c8db1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:54.914551 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\400.png"
+2026-10-21 17:37:55.248222 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\400.png:
+e0652d050e3b80177dc230fff0cb09fe09eb2a10
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:55.249219 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\85.png"
+2026-10-21 17:37:55.598759 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\85.png:
+250f02fa451eba5617c341c8e1deeff9e7ba6595
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:55.599755 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\manifest.xml
+2026-10-21 17:37:55.600755 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\Picture.png"
+2026-10-21 17:37:55.936479 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ИерархическийСписок\Picture.png:
+97d6f60242f7d96dd7799cbb33c9c9ee5ee539c6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:55.937476 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\manifest.xml
+2026-10-21 17:37:55.938473 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png"
+2026-10-21 17:37:56.274127 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png:
+977960c57bbc2ec2a18d4e44d45be217b211f761
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:56.275126 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png"
+2026-10-21 17:37:56.612773 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png:
+977960c57bbc2ec2a18d4e44d45be217b211f761
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:56.612773 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_100_rtl.png
+2026-10-21 17:37:56.615739 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png"
+2026-10-21 17:37:56.954865 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png:
+6af826b037b767e0214c8fda2a851e7bac6de881
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:56.956411 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png"
+2026-10-21 17:37:57.293149 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png:
+6af826b037b767e0214c8fda2a851e7bac6de881
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:57.294120 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_125_rtl.png
+2026-10-21 17:37:57.295117 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png"
+2026-10-21 17:37:57.646651 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png:
+d87b3bb2e106d6a28280bc08acab80293bfd745d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:57.647651 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png"
+2026-10-21 17:37:57.993212 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png:
+d87b3bb2e106d6a28280bc08acab80293bfd745d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:57.994209 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_150_rtl.png
+2026-10-21 17:37:57.996205 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png"
+2026-10-21 17:37:58.351268 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png:
+da3b4b86c1bc05e05a32096ac6d8b058a3d89d51
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:58.352266 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png"
+2026-10-21 17:37:58.761443 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png:
+da3b4b86c1bc05e05a32096ac6d8b058a3d89d51
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:58.762440 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_175_rtl.png
+2026-10-21 17:37:58.765433 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png"
+2026-10-21 17:37:59.186567 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png:
+2b1bca7d3fa8cb49b0e39c2cebae7e253f8e5f82
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:59.187562 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png"
+2026-10-21 17:37:59.594482 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png:
+2b1bca7d3fa8cb49b0e39c2cebae7e253f8e5f82
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:37:59.595483 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_200_rtl.png
+2026-10-21 17:37:59.598472 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png"
+2026-10-21 17:38:00.057295 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png:
+391247bbaf396ae6bdaef82fbccc62b698d58b98
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:00.059290 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png"
+2026-10-21 17:38:00.545567 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png:
+391247bbaf396ae6bdaef82fbccc62b698d58b98
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:00.546564 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_300_rtl.png
+2026-10-21 17:38:00.549557 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png"
+2026-10-21 17:38:01.077181 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png:
+948f1fafee042089f1bc32cec412faa7740d8265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:01.078183 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png"
+2026-10-21 17:38:01.599301 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png:
+948f1fafee042089f1bc32cec412faa7740d8265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:01.600299 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_400_rtl.png
+2026-10-21 17:38:01.603292 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png"
+2026-10-21 17:38:02.224466 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png:
+74b1d69b19a0512088991bd5429338c20857cf4e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:02.226462 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png"
+2026-10-21 17:38:02.792719 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png:
+74b1d69b19a0512088991bd5429338c20857cf4e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:02.793716 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_85_rtl.png
+2026-10-21 17:38:02.795710 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png"
+2026-10-21 17:38:03.299388 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png:
+654d2847606a94bad78c7b7f0a755aac29c9dba1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:03.300385 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png"
+2026-10-21 17:38:03.879292 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png:
+d5985b54d0337e8d8d0224a66c47860a9d88a1e5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:03.880289 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png"
+2026-10-21 17:38:04.450994 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png:
+d5985b54d0337e8d8d0224a66c47860a9d88a1e5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:04.451991 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_old_rtl.png
+2026-10-21 17:38:04.454983 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png"
+2026-10-21 17:38:04.997224 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png:
+654d2847606a94bad78c7b7f0a755aac29c9dba1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:04.998222 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_ltr.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Найти\tbgledit_rtl.png
+2026-10-21 17:38:05.003210 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\h.png"
+2026-10-21 17:38:05.479452 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\h.png:
+16ca02c8cf229c008c1553516a4906935efe4e20
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:05.481447 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\l.png"
+2026-10-21 17:38:05.979724 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\l.png:
+0ba68fbfaecd821746af1d07cbab83dc9d0b4c56
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:05.980723 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\m.png"
+2026-10-21 17:38:06.468913 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\m.png:
+ed0d7357871ad358d30aa799876952121b1c5d53
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:06.470908 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\manifest.xml
+2026-10-21 17:38:06.472903 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile.png"
+2026-10-21 17:38:06.906277 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile.png:
+2f2a89089e0c6724ad3b44163c4f856d5124e01f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:06.907274 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_100.png"
+2026-10-21 17:38:07.328167 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_100.png:
+a4e38d0400d06ce7dbe52011600c691734aa8b86
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:07.330158 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_125.png"
+2026-10-21 17:38:07.795530 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_125.png:
+bd46a071656594f222a198d482749c52fd9c9d9a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:07.796528 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_150.png"
+2026-10-21 17:38:08.257679 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_150.png:
+ff498683670ac29a14063b8dd7ad30df8e7ed1c7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:08.259672 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_175.png"
+2026-10-21 17:38:08.662621 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_175.png:
+325bc7d802bc58ccc5231fc2df6ca06e3e533fa0
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:08.664617 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_200.png"
+2026-10-21 17:38:09.082677 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_200.png:
+e40defbc9b5ecd66a04f78428eb466052c551170
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:09.083675 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_300.png"
+2026-10-21 17:38:09.509133 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_300.png:
+d7c695febdeaf0734f53c12e7785cd221fe04da6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:09.511128 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_400.png"
+2026-10-21 17:38:09.951658 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_400.png:
+e605e227947fb670caf531291d123ff51752c493
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:09.952655 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_85.png"
+2026-10-21 17:38:10.382188 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_85.png:
+9293a72e356481d02cac5489f9c8c475ae212d73
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:10.383185 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_old.png"
+2026-10-21 17:38:10.794659 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\tbglfile_old.png:
+c4af5b114b34006b9edb16e8005856876c2b9a56
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:10.795657 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .db - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\Thumbs.db
+2026-10-21 17:38:10.797651 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\x.png"
+2026-10-21 17:38:11.220528 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ОткрытьФайл\x.png:
+19d96c215aefb8d3e0df80f6d966ab9535032f9d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:11.223519 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\100.png"
+2026-10-21 17:38:11.651108 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\100.png:
+add5ebd939d3ed8754b1bd703b1128f066a196b9
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:11.652105 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\125.png"
+2026-10-21 17:38:12.074598 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\125.png:
+1c1ccb352da3896b4174544dfd4fbefdf50e9e0a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:12.076594 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\150.png"
+2026-10-21 17:38:12.503025 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\150.png:
+58e87f994e88aa3341c47c773eb8566f57903cd6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:12.504023 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\175.png"
+2026-10-21 17:38:13.146608 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\175.png:
+4b47393fb07d6c4720d964e1ff979b7713391565
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:13.147605 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\200.png"
+2026-10-21 17:38:13.605091 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\200.png:
+90dc8275b9591e43f6af57b7ecee48bc6238099b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:13.607086 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\300.png"
+2026-10-21 17:38:14.098015 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\300.png:
+0d5fbb3728811272447ea7332b9290177ff2f559
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:14.099012 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\400.png"
+2026-10-21 17:38:14.555085 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\400.png:
+16452fc25fcb07535a0bc58ea81015afc65a7158
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:14.556083 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\85.png"
+2026-10-21 17:38:15.083550 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\85.png:
+8c47fecf754069e9aec3fc170448cc4185fcd2ac
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:15.085545 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\cropped_pillow_125.png"
+2026-10-21 17:38:15.601285 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\cropped_pillow_125.png:
+1ef0212764e9b5704fe1aa7614b74974c676dbf1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:15.603280 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\manifest.xml
+2026-10-21 17:38:15.605274 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\Picture.png"
+2026-10-21 17:38:16.064188 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Папки\Picture.png:
+b1ca7b1ed5311a82c71a096dd68eb3407ee11fd6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:16.066183 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\h.png"
+2026-10-21 17:38:16.479603 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\h.png:
+70fdc3fdf244912d02adef152439d564678aa345
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:16.481597 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\l.png"
+2026-10-21 17:38:16.905621 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\l.png:
+5e8d086da487f3ecd4b93b8ef4256cf5b94b301a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:16.907616 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\m.png"
+2026-10-21 17:38:17.305974 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\m.png:
+25c750e50238dbe3a40181bf4ba98a6d23bdce94
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:17.307969 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\manifest.xml
+2026-10-21 17:38:17.309975 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png"
+2026-10-21 17:38:17.731441 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png:
+5e8d086da487f3ecd4b93b8ef4256cf5b94b301a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:17.732438 Найдена копия файла: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\l.png в: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog.png
+2026-10-21 17:38:17.734432 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_100.png"
+2026-10-21 17:38:18.144585 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_100.png:
+31e514ed66b67ecf006159879269fb1c60d44de8
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:18.146583 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_125.png"
+2026-10-21 17:38:18.545523 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_125.png:
+8febfbc413cad9da6a44e4865fd5c0f88f441735
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:18.546518 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_150.png"
+2026-10-21 17:38:18.963173 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_150.png:
+6b2a968fb9a6be80f249f19891c3ccf25bd21563
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:18.964170 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_175.png"
+2026-10-21 17:38:19.376505 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_175.png:
+b3ee12932d8068bec3d9ef5eec3b16bc833d59f8
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:19.378501 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_200.png"
+2026-10-21 17:38:19.809355 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_200.png:
+2422d41aabcb40e36243ecdd272ed836db89e62b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:19.810352 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_300.png"
+2026-10-21 17:38:20.236069 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_300.png:
+acb0c489afd6f695016a9e9c5b3662cf1542d67d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:20.238063 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_400.png"
+2026-10-21 17:38:20.656531 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_400.png:
+74e3f58a886b09958deda50444e30b1fcad23c45
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:20.657529 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_85.png"
+2026-10-21 17:38:21.066712 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_85.png:
+63620922df5e91ea7ec403d055e3504d7d46269b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:21.068706 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_old.png"
+2026-10-21 17:38:21.481133 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\tbeventlog_old.png:
+217e89bdc961739656b77828b9114b7b4620a2b1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:21.482131 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\x.png"
+2026-10-21 17:38:21.901588 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ПоказатьДанные\x.png:
+e160a7cab8f3527d05b19237d602e89541b672ca
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:21.903582 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\h.png"
+2026-10-21 17:38:22.325259 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\h.png:
+735d3107418a51a1f0234be4371891f18d495086
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:22.326256 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\l.png"
+2026-10-21 17:38:22.738056 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\l.png:
+171e8d95bf5551b38d52f98c6f23b193eb396f7d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:22.740050 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\m.png"
+2026-10-21 17:38:23.148585 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\m.png:
+cb489e93c6f1f7ca458483579163e3d2af61fe5e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:23.149583 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\manifest.xml
+2026-10-21 17:38:23.150579 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti.png"
+2026-10-21 17:38:23.567554 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti.png:
+bd444a420ba647d134a4d611ffc86edbaafc60ff
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:23.568551 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_100.png"
+2026-10-21 17:38:23.997953 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_100.png:
+2f8fe06eebe5a71be679d0abe5c7c6429a00d5df
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:23.998951 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_125.png"
+2026-10-21 17:38:24.414922 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_125.png:
+d56aa8776cee832a41a073a67d232e4ad5bc4bd0
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:24.416917 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_150.png"
+2026-10-21 17:38:24.849557 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_150.png:
+42b61610379b3ec5c81afc7152e9ad1914eb34bc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:24.850554 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_175.png"
+2026-10-21 17:38:25.262929 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_175.png:
+cd395d86b78bc0cdc31d30a8aaf6e62d2499344f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:25.263926 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_200.png"
+2026-10-21 17:38:25.682789 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_200.png:
+d5d4c0990ef9c87b8f050f9c01fe8ad227697d44
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:25.683785 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_300.png"
+2026-10-21 17:38:26.155945 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_300.png:
+668dbd2c8d40473799c0e5f5b2bd32ad829ad662
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:26.156942 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_400.png"
+2026-10-21 17:38:26.598045 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_400.png:
+752d45986fcc37f1bff1712248e52e0bf563d637
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:26.599038 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_85.png"
+2026-10-21 17:38:27.027283 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_85.png:
+62088a0aed73fe8b20d9abbce79f53192906daa6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:27.029277 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .bmp - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\tbglacti_old.bmp
+2026-10-21 17:38:27.030275 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\x.png"
+2026-10-21 17:38:27.437333 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаИерархическийСписок\x.png:
+a4d9bc6087b26d1b6400440d2ff1fcdd0a997ada
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:27.440325 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\h.png"
+2026-10-21 17:38:27.898875 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\h.png:
+c06bf6c9e4908468709bdd9138c82033d45d3ddc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:27.899872 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\l.png"
+2026-10-21 17:38:28.451778 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\l.png:
+1df3374addb9597cce06e986b6fc26df1163785b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:28.453772 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\m.png"
+2026-10-21 17:38:28.901261 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\m.png:
+725480bf080fb85d8b22424b496bc8087b3403d1
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:28.902259 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\manifest.xml
+2026-10-21 17:38:28.903256 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti.png"
+2026-10-21 17:38:29.309026 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti.png:
+215181d910554887ee442d1925f329eb8b2ec941
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:29.311022 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_100.png"
+2026-10-21 17:38:29.737676 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_100.png:
+48e40847b3412635e8931ea0c5976db921ccfe13
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:29.738674 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_125.png"
+2026-10-21 17:38:30.181517 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_125.png:
+49e519ebe90046b3b2516546c06883210409b773
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:30.183512 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_150.png"
+2026-10-21 17:38:30.602566 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_150.png:
+b60f0ead355f21510ea87c1a7326b7b1be31e9ac
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:30.603563 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_175.png"
+2026-10-21 17:38:31.027817 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_175.png:
+bf74453392947e0c1ec133a4f25bc04388d2e965
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:31.028817 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_200.png"
+2026-10-21 17:38:31.450236 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_200.png:
+cc70364664d17eae3518de58f781f4d8d205a316
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:31.451233 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_300.png"
+2026-10-21 17:38:31.870737 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_300.png:
+12fb0ddbfa00e7f8a4789fa5432948dc3e52642e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:31.871735 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_400.png"
+2026-10-21 17:38:32.347834 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_400.png:
+5de3faca585855b8f82439dfdf3ad197a16596b9
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:32.348830 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_85.png"
+2026-10-21 17:38:32.786347 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_85.png:
+4accdad3cd62c6048339bd7ac63b17e039d25308
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:32.788343 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .bmp - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\tbglacti_old.bmp
+2026-10-21 17:38:32.789340 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\x.png"
+2026-10-21 17:38:33.232078 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\РежимПросмотраСпискаСписок\x.png:
+71beb7a82ce8ff42745fd3464fe1fbe3b868e807
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:33.235069 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\100.png"
+2026-10-21 17:38:33.653478 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\100.png:
+0842d0b06d5019c3bc01d5702c977141674f9899
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:33.655473 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\125.png"
+2026-10-21 17:38:34.089221 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\125.png:
+be5de3519cf679bae87ff0c75c603801865b7d4f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:34.090220 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\150.png"
+2026-10-21 17:38:34.518340 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\150.png:
+024b49a1bd89a24ca81b0866b25b15e87ef78c9e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:34.519338 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\175.png"
+2026-10-21 17:38:34.969782 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\175.png:
+931550864e8546f8fee72009554fadec2f55fd06
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:34.970780 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\200.png"
+2026-10-21 17:38:35.413210 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\200.png:
+9db8c8fdb673eec31820288b2b6bb9c67124d1f3
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:35.415204 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\300.png"
+2026-10-21 17:38:35.862547 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\300.png:
+22c82acd11c09a4fca3b96ea8d53cc5175853084
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:35.863544 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\400.png"
+2026-10-21 17:38:36.322002 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\400.png:
+d1c852ca2f4a4f37bbd0a852d05c031aad3b4ffe
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:36.323996 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\85.png"
+2026-10-21 17:38:36.768033 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\85.png:
+e64b0936d91be444ac493b0577e760a357aa90cb
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:36.769032 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\manifest.xml
+2026-10-21 17:38:36.771026 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Picture.png"
+2026-10-21 17:38:37.253006 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Picture.png:
+aa855e9df677cbecc3be2e0a2cf1117d4521be1b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:37.254003 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .db - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СкопироватьВБуферОбмена\Thumbs.db
+2026-10-21 17:38:37.256514 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\h.png"
+2026-10-21 17:38:37.689567 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\h.png:
+5586beac0c7a06f9576e366981240b9114d8542f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:37.691563 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\l.png"
+2026-10-21 17:38:38.106460 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\l.png:
+73b975fe74492eb86ac557c7c410aeede775c187
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:38.108454 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\m.png"
+2026-10-21 17:38:38.525104 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\m.png:
+662645b32645ad6c868707fac2e730e5dfb1bf6f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:38.527099 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\manifest.xml
+2026-10-21 17:38:38.528097 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile.png"
+2026-10-21 17:38:38.977225 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile.png:
+726ebc86383ac1e77e47534785b4cbc945bdecdf
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:38.978220 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_100.png"
+2026-10-21 17:38:39.404711 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_100.png:
+7764fafaf37e35b70b186415f8402d72dfbb0598
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:39.406706 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_125.png"
+2026-10-21 17:38:39.863108 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_125.png:
+50ce4e7adfae5c3a48e0c9a3ae96e96fb114a265
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:39.864105 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_150.png"
+2026-10-21 17:38:40.282702 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_150.png:
+a7a845298305de3699a6f41aa0c57f7ddb6c0d12
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:40.283699 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_175.png"
+2026-10-21 17:38:40.704392 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_175.png:
+eb6f92884e8b8130f3d9923cf564d2a9fb678ce5
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:40.705390 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_200.png"
+2026-10-21 17:38:41.118001 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_200.png:
+3c5f8382291bbbb69fac7858e2a8ea889253e64d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:41.118998 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_300.png"
+2026-10-21 17:38:41.569168 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_300.png:
+946a3467cf5367dbe9c00be9da41b36d1af3bf39
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:41.570165 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_400.png"
+2026-10-21 17:38:42.000029 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_400.png:
+88456f317a886e94346075f2cdfd8cb266ee359f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:42.002024 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_85.png"
+2026-10-21 17:38:42.425345 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_85.png:
+c919caa6eef1f90aabac07ad0476eed277a73b8a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:42.432326 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_old.png"
+2026-10-21 17:38:42.994875 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\tbglfile_old.png:
+be1d9827285639a096dbcfeef1dbd3e42eb38a43
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:42.995875 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\x.png"
+2026-10-21 17:38:43.399067 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\СохранитьФайл\x.png:
+edc32ee85173d379ed5b053dce76a6d667875cb4
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:43.401062 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\100.png"
+2026-10-21 17:38:43.831895 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\100.png:
+60c4b125d6c815d509ed46978dcea3f827c5ce84
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:43.832892 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\125.png"
+2026-10-21 17:38:44.176143 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\125.png:
+80dc52f4fc666f87017614a11224df0a58de94cc
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:44.177141 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\150.png"
+2026-10-21 17:38:44.594659 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\150.png:
+8c6e2bc2c29ea15d37dd40e1374d121ce77e27ea
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:44.595655 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\175.png"
+2026-10-21 17:38:45.011908 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\175.png:
+2825872e9ccde811f642802b98cc75d7624172d2
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:45.012905 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\200.png"
+2026-10-21 17:38:45.401836 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\200.png:
+423f6c95e50c61f1942915e5ad332f87c0075936
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:45.410812 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\300.png"
+2026-10-21 17:38:45.873254 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\300.png:
+14f4c5eb59c512a67ec9d30b4b40528cd6f5de1a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:45.874251 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\400.png"
+2026-10-21 17:38:46.301359 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\400.png:
+0b5462f70d4618548418741874ba062b4e705014
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:46.302356 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\85.png"
+2026-10-21 17:38:46.717541 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\85.png:
+e527329601e02cd66f406abd718bb8d03b2e5c0a
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:46.718539 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\manifest.xml
+2026-10-21 17:38:46.719536 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\Picture.png"
+2026-10-21 17:38:47.087072 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\Структура\Picture.png:
+ff1207ba3af4ed23f53fcc7300b6a93d0a98fd5c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:47.089066 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\100.png"
+2026-10-21 17:38:47.448368 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\100.png:
+81483df6e08280e27d2e725acb08414eab34e9af
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:47.449379 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\125.png"
+2026-10-21 17:38:47.808938 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\125.png:
+d923925cf7f9cf2c3cdae2fdfe0d3b49e313554d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:47.810934 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\150.png"
+2026-10-21 17:38:48.150123 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\150.png:
+e4d53649420b025751bab830a7bbe5869faf8632
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:48.151120 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\175.png"
+2026-10-21 17:38:48.494756 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\175.png:
+dfecdfeec927d2b0c84c2aa2233679957dd42635
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:48.495753 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\200.png"
+2026-10-21 17:38:48.848103 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\200.png:
+b25b9156211a00d99a893b0bc921a4c027ed8805
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:48.849100 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\300.png"
+2026-10-21 17:38:49.189336 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\300.png:
+5be35419ea648ffd0a94c0e9db0e050268102355
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:49.190333 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\400.png"
+2026-10-21 17:38:49.531593 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\400.png:
+1131dbd45f1e56489773ca5a75c3d1736ac455ed
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:49.532591 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\85.png"
+2026-10-21 17:38:49.887311 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\85.png:
+6076be278f6218964d28b325d4df48afc4d5bd2f
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:49.888308 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\manifest.xml
+2026-10-21 17:38:49.889305 Защищенные точкой папки ._100.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.889305 Защищенные точкой папки ._125.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.890302 Защищенные точкой папки ._150.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.890302 Защищенные точкой папки ._175.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.890302 Защищенные точкой папки ._200.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.891300 Защищенные точкой папки ._300.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.891300 Защищенные точкой папки ._400.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.891300 Защищенные точкой папки ._85.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.892297 Защищенные точкой папки ._manifest.xml. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСписок\__MACOSX
+2026-10-21 17:38:49.893294 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\100.png"
+2026-10-21 17:38:50.244147 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\100.png:
+b751fac165366b9d9cb6cef730d4182dada76609
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:50.245145 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\125.png"
+2026-10-21 17:38:50.620547 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\125.png:
+9c347d6891bd85bbf4d31d5cb2fcb9c0abc958f7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:50.621544 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\150.png"
+2026-10-21 17:38:50.962302 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\150.png:
+65b068747bdbaa54838753ee8bdfaaa727648808
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:50.963299 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\175.png"
+2026-10-21 17:38:51.377641 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\175.png:
+6d02dc5aeda0cb3933d5e00e17539f36155c4991
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:51.379635 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\200.png"
+2026-10-21 17:38:51.804710 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\200.png:
+a8470607d0ec6466fca25c071c20c76022628253
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:51.806704 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\300.png"
+2026-10-21 17:38:52.214161 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\300.png:
+6fd4366e4f21e8a6b10e7ffbc7db4b3fb79c2b54
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:52.215193 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\400.png"
+2026-10-21 17:38:52.662392 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\400.png:
+d2076ace5316e5a5b09c5d9afed13ed0ca486540
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:52.663389 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\85.png"
+2026-10-21 17:38:53.077866 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\85.png:
+f5f7cc566a699c2e6d264eee6189de567708126d
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:53.078834 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\manifest.xml
+2026-10-21 17:38:53.079831 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .db - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\Thumbs.db
+2026-10-21 17:38:53.081826 Защищенные точкой папки ._100.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.081826 Защищенные точкой папки ._125.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.081826 Защищенные точкой папки ._150.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.082823 Защищенные точкой папки ._175.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.082823 Защищенные точкой папки ._200.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.083821 Защищенные точкой папки ._300.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.083821 Защищенные точкой папки ._400.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.083821 Защищенные точкой папки ._85.png. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.084818 Защищенные точкой папки ._manifest.xml. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ТипСтрока\__MACOSX
+2026-10-21 17:38:53.086813 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\100.png"
+2026-10-21 17:38:53.474425 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\100.png:
+c7b1c62a6530c2c027141e685f380500da6fd479
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:53.476421 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\125.png"
+2026-10-21 17:38:53.845489 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\125.png:
+9c14edd56dd7ea4b927d2d99d54095b2c41a71a6
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:53.846487 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\150.png"
+2026-10-21 17:38:54.218545 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\150.png:
+dfbae70c56912d9dcd67a34eb2abea5222b1c76e
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:54.219568 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\175.png"
+2026-10-21 17:38:54.588602 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\175.png:
+edcb929e8a4c0aba18a5197c8319cd331d51118b
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:54.590623 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\200.png"
+2026-10-21 17:38:54.964297 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\200.png:
+d3b2004482d0391dac2c1d22df1b596f4dc67c6c
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:54.965294 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\300.png"
+2026-10-21 17:38:55.352081 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\300.png:
+6dbacbe9fb50dbb1990ef670da6e9e7b8e79bd32
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:55.354077 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\400.png"
+2026-10-21 17:38:55.729214 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\400.png:
+0ef82165824a8dfdd3079c9dc7f49fa5027e56a7
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:55.730212 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\85.png"
+2026-10-21 17:38:56.098990 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\85.png:
+dbb756a8a36bb1dcabe4f6a872ce146f1f960159
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:56.099987 Расширение .xml в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\manifest.xml
+2026-10-21 17:38:56.100985 InFile: "C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\Picture.png"
+2026-10-21 17:38:56.479238 result.stdout: Хэш SHA1 C:\Users\golikov.s\git\GUI---Find-duplicates\res\img\ФлажокИКрестик\Picture.png:
+6cd4ce6612e7693a84bb7557c35e0448ce915380
+CertUtil: -hashfile — команда успешно выполнена.
+
+2026-10-21 17:38:56.480263 Расширение .ini в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\sample.ini
+2026-10-21 17:38:56.482232 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\sent.txt
+2026-10-21 17:38:56.483227 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\spam.txt
+2026-10-21 17:38:56.484225 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\subprocess_ps.py
+2026-10-21 17:38:56.485222 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\subprocess_ps_no_window.py
+2026-10-21 17:38:56.486219 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .txt - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test.txt
+2026-10-21 17:38:56.487245 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test_config.py
+2026-10-21 17:38:56.488215 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\test_exist.py
+2026-10-21 17:38:56.489240 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .pyw - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\textarea.pyw
+2026-10-21 17:38:56.490236 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\walk.py
+2026-10-21 17:38:56.491236 Расширение .py в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\walk_popen.py
+2026-10-21 17:38:56.493229 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .pyc - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\__pycache__\logs.cpython-311.pyc
+2026-10-21 17:38:56.494228 Защищенные точкой папки .nomedia. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования
+2026-10-21 17:38:56.495227 Выбранное расширение для поиска файлов: .PNG: не соответствует текущему: .log - Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\file-log.log
+2026-10-21 17:38:56.497194 Расширение .dat в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\walk_popen.py_Контрольная сумма SHA-512.dat
+2026-10-21 17:38:56.498191 Расширение .lnk в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\Инструменты разработчика.lnk
+2026-10-21 17:38:56.499188 Расширение .dat в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\Контрольная сумма SHA-512.dat
+2026-10-21 17:38:56.501183 Расширение .zip в списке игнорируемых. Путь к файлу: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\Контрольная сумма SHA-512.zip
+2026-10-21 17:38:56.506167 Защищенные точкой папки .metadata. Путь к папке: C:\Users\golikov.s\git\GUI---Find-duplicates\Дирректория тестирования\Новая папка (2)\965
+2026-10-21 17:38:58.802966 Поиск завершен...
+
